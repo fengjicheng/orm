@@ -1,0 +1,5 @@
+D:\weisdk\trunk\Qhyhgf.Orm\bin\Debug\Qhyhgf.Orm.dll
+D:\weisdk\trunk\Qhyhgf.Orm\bin\Debug\Qhyhgf.Orm.pdb
+D:\weisdk\trunk\Qhyhgf.Orm\obj\Debug\Qhyhgf.Orm.dll
+D:\weisdk\trunk\Qhyhgf.Orm\obj\Debug\Qhyhgf.Orm.pdb
+D:\weisdk\trunk\Qhyhgf.Orm\obj\Debug\Qhyhgf.Orm.csprojResolveAssemblyReference.cache

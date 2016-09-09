@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{657162D8-6B94-42CE-B2A7-782491502956}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qhyhgf.Orm</RootNamespace>
+    <AssemblyName>Qhyhgf.Orm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\ColumnAttribute.cs" />
+    <Compile Include="Attribute\ForeignKeyFieldAttribute.cs" />
+    <Compile Include="Attribute\TableAttribute.cs" />
+    <Compile Include="Attribute\ViewAttribute.cs" />
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="Exception\BuildExceptionHandler.cs" />
+    <Compile Include="Cache\CacheHelper.cs" />
+    <Compile Include="Cache\ICacheHelper.cs" />
+    <Compile Include="CommandKind.cs" />
+    <Compile Include="Config\ActionType.cs" />
+    <Compile Include="Config\Collection.cs" />
+    <Compile Include="Config\DataSourceType.cs" />
+    <Compile Include="Config\Section.cs" />
+    <Compile Include="Config\ValueSetting.cs" />
+    <Compile Include="CPQuery.cs" />
+    <Compile Include="DbContext.cs" />
+    <Compile Include="Exception\OrmException.cs" />
+    <Compile Include="SqlHelper\SqlBehavior.cs" />
+    <Compile Include="Visitors\ExpressionToSql\BaseExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\Expre2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\Expression2SqlCore.cs" />
+    <Compile Include="Visitors\ExpressionToSql\Expression2SqlEx.cs" />
+    <Compile Include="Visitors\ExpressionToSql\Expression2SqlProvider.cs" />
+    <Compile Include="Visitors\ExpressionToSql\BinaryExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\ConstantExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\MemberExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\MethodCallExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\NewArrayExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\NewExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\UnaryExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\IExpression2Sql.cs" />
+    <Compile Include="Visitors\ExpressionToSql\SqlPack.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="FastReflection\ConstructorInvoker.cs" />
+    <Compile Include="FastReflection\ConstructorInvokerCache.cs" />
+    <Compile Include="FastReflection\ConstructorInvokerFactory.cs" />
+    <Compile Include="FastReflection\FastReflectionCache.cs" />
+    <Compile Include="FastReflection\FastReflectionCaches.cs" />
+    <Compile Include="FastReflection\FastReflectionExtensions.cs" />
+    <Compile Include="FastReflection\FastReflectionFactories.cs" />
+    <Compile Include="FastReflection\FieldAccessor.cs" />
+    <Compile Include="FastReflection\FieldAccessorCache.cs" />
+    <Compile Include="FastReflection\FieldAccessorFactory.cs" />
+    <Compile Include="FastReflection\IFastReflectionCache.cs" />
+    <Compile Include="FastReflection\IFastReflectionFactory.cs" />
+    <Compile Include="FastReflection\MethodInvoker.cs" />
+    <Compile Include="FastReflection\MethodInvokerCache.cs" />
+    <Compile Include="FastReflection\MethodInvokerFactory.cs" />
+    <Compile Include="FastReflection\PropertyAccessor.cs" />
+    <Compile Include="FastReflection\PropertyAccessorCache.cs" />
+    <Compile Include="FastReflection\PropertyAccessorFactory.cs" />
+    <Compile Include="Page\PagedList.cs" />
+    <Compile Include="Page\IPage.cs" />
+    <Compile Include="Page\SortType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visitors\SqlProvider.cs" />
+    <Compile Include="Visitors\SqlQuery.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="SqlHelper\SqlHelper.cs" />
+    <Compile Include="Utils\AccuracyUtils.cs" />
+    <Compile Include="Utils\DESEncrypt.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

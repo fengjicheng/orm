@@ -1,0 +1,11 @@
+D:\weisdk\trunk\WeiXin.WebApp\bin\WeiXin.WebUi.dll
+D:\weisdk\trunk\WeiXin.WebApp\bin\WeiXin.WebUi.pdb
+D:\weisdk\trunk\WeiXin.WebApp\bin\Newtonsoft.Json.dll
+D:\weisdk\trunk\WeiXin.WebApp\bin\Qhyhgf.WeiXin.Qy.api.dll
+D:\weisdk\trunk\WeiXin.WebApp\bin\Qhyhgf.WeiXin.Qy.api.pdb
+D:\weisdk\trunk\WeiXin.WebApp\bin\Newtonsoft.Json.pdb
+D:\weisdk\trunk\WeiXin.WebApp\bin\Newtonsoft.Json.xml
+D:\weisdk\trunk\WeiXin.WebApp\obj\Debug\WeiXin.WebApp.csprojResolveAssemblyReference.cache
+D:\weisdk\trunk\WeiXin.WebApp\obj\Debug\WeiXin.WebUi.dll
+D:\weisdk\trunk\WeiXin.WebApp\obj\Debug\WeiXin.WebUi.pdb
+D:\weisdk\trunk\WeiXin.WebApp\bin\WeiXin.WebUi.dll.config

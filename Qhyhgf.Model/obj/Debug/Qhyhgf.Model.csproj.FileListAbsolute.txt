@@ -1,0 +1,5 @@
+D:\weisdk\trunk\Qhyhgf.Model\bin\Debug\Qhyhgf.Model.dll
+D:\weisdk\trunk\Qhyhgf.Model\bin\Debug\Qhyhgf.Model.pdb
+D:\weisdk\trunk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.dll
+D:\weisdk\trunk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.pdb
+D:\weisdk\trunk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.csprojResolveAssemblyReference.cache

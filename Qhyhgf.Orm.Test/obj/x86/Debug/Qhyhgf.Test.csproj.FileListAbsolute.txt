@@ -1,0 +1,8 @@
+D:\weisdk\trunk\Qhyhgf.Orm.Test\bin\Debug\Qhyhgf.Test.exe
+D:\weisdk\trunk\Qhyhgf.Orm.Test\bin\Debug\Qhyhgf.Test.pdb
+D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Test.exe
+D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Test.pdb
+D:\weisdk\trunk\Qhyhgf.Orm.Test\bin\Debug\Qhyhgf.Test.exe.config
+D:\weisdk\trunk\Qhyhgf.Orm.Test\bin\Debug\Qhyhgf.Orm.dll
+D:\weisdk\trunk\Qhyhgf.Orm.Test\bin\Debug\Qhyhgf.Orm.pdb
+D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Test.csprojResolveAssemblyReference.cache

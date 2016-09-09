@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00185612-D22A-4DF4-A611-E3D81D8F07EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qhyhgf.WeiXin.Qy.Api</RootNamespace>
+    <AssemblyName>Qhyhgf.WeiXin.Qy.api</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>C:\Users\caoxiancc\Downloads\log4net-1.2.13\bin\net\3.5\release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\GetParameterAttribute.cs" />
+    <Compile Include="Attribute\HttpMethodAttribute.cs" />
+    <Compile Include="Attribute\HttpVerb.cs" />
+    <Compile Include="Attribute\SerializeVerb.cs" />
+    <Compile Include="Crypt\Sample.cs" />
+    <Compile Include="DuplexGzipModule.cs" />
+    <Compile Include="Config\WeiXinCollection.cs" />
+    <Compile Include="Config\WeiXinKeyValueSetting.cs" />
+    <Compile Include="Config\WeiXinSection.cs" />
+    <Compile Include="DefaultWeiXinClient.cs" />
+    <Compile Include="Domain\AllowPartysEntity.cs" />
+    <Compile Include="Domain\AllowTagsEntity.cs" />
+    <Compile Include="Domain\AllowUserinfosEntity.cs" />
+    <Compile Include="Domain\AttrsEntity.cs" />
+    <Compile Include="Domain\BaseEvent.cs" />
+    <Compile Include="Domain\BaseMessage.cs" />
+    <Compile Include="Domain\ButtonEntity.cs" />
+    <Compile Include="Domain\ClickEvent.cs" />
+    <Compile Include="Domain\DepartmentEntity.cs" />
+    <Compile Include="Domain\EnterAgentEvent.cs" />
+    <Compile Include="Domain\ErrCode.cs" />
+    <Compile Include="Domain\EventType.cs" />
+    <Compile Include="Domain\LocationEvent.cs" />
+    <Compile Include="Domain\LocationSelectEvent.cs" />
+    <Compile Include="Domain\MediaEntity.cs" />
+    <Compile Include="Domain\MediaType.cs" />
+    <Compile Include="Domain\MediaVideoEntity.cs" />
+    <Compile Include="Domain\MenuEntity.cs" />
+    <Compile Include="Domain\MessageType.cs" />
+    <Compile Include="Domain\PicEntity.cs" />
+    <Compile Include="Domain\PicMd5SumEntity.cs" />
+    <Compile Include="Domain\PicPhotoOrAlbumEvent.cs" />
+    <Compile Include="Domain\PicSysPhotoEvent.cs" />
+    <Compile Include="Domain\PicWeixinEvent.cs" />
+    <Compile Include="Domain\RequestText.cs" />
+    <Compile Include="Domain\ResponseImage.cs" />
+    <Compile Include="Domain\ResponseLocation.cs" />
+    <Compile Include="Domain\ResponseText.cs" />
+    <Compile Include="Domain\ResponseVideo.cs" />
+    <Compile Include="Domain\ResponseVoice.cs" />
+    <Compile Include="Domain\ScanCodeInfoEntity.cs" />
+    <Compile Include="Domain\ScanCodePushEvent.cs" />
+    <Compile Include="Domain\ScanCodeWaitMsgEvent.cs" />
+    <Compile Include="Domain\SendLocationInfoEntity.cs" />
+    <Compile Include="Domain\SendPicsInfoEntity.cs" />
+    <Compile Include="Domain\TagEntity.cs" />
+    <Compile Include="Domain\TokenEntity.cs" />
+    <Compile Include="Domain\UserEntity.cs" />
+    <Compile Include="Domain\RequestVoice.cs" />
+    <Compile Include="Domain\RequestVideo.cs" />
+    <Compile Include="Domain\RequestNews.cs" />
+    <Compile Include="Domain\UserItemEntity.cs" />
+    <Compile Include="Domain\ViewEvent.cs" />
+    <Compile Include="Dynamic\DynamicMethodEmit.cs" />
+    <Compile Include="Dynamic\MethodWrapper.cs" />
+    <Compile Include="Dynamic\PropertyWrapper.cs" />
+    <Compile Include="Dynamic\ReflectionExtensions.cs" />
+    <Compile Include="HttpFactory\Http.cs" />
+    <Compile Include="HttpFactory\HttpFactory.cs" />
+    <Compile Include="HttpFactory\HttpFile.cs" />
+    <Compile Include="HttpFactory\HttpGet.cs" />
+    <Compile Include="HttpFactory\HttpPost.cs" />
+    <Compile Include="RedirectAuthentication.cs" />
+    <Compile Include="IWeiXinClient.cs" />
+    <Compile Include="IWeiXinRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AddTagusersTagRequest.cs" />
+    <Compile Include="Request\AuthsuccUserRequest.cs" />
+    <Compile Include="Request\BatchDeleteUserRequest.cs" />
+    <Compile Include="Request\CreateDepartmentRequest.cs" />
+    <Compile Include="Request\CreateMenuRequest.cs" />
+    <Compile Include="Request\CreateTagRequest.cs" />
+    <Compile Include="Request\CreateUserRequest.cs" />
+    <Compile Include="Request\DeleteDepartmentRequest.cs" />
+    <Compile Include="Request\DeleteMenuRequest.cs" />
+    <Compile Include="Request\DeleteTagRequest.cs" />
+    <Compile Include="Request\DeleteUserRequest.cs" />
+    <Compile Include="Request\DelTagusersTagRequest.cs" />
+    <Compile Include="Request\GetAgentRequest.cs" />
+    <Compile Include="Request\GetCallbackIpRequest.cs" />
+    <Compile Include="Request\GetListDepartmentRequest.cs" />
+    <Compile Include="Request\GetListTagRequest.cs" />
+    <Compile Include="Request\GetMediaRequest.cs" />
+    <Compile Include="Request\GetMenuRequest.cs" />
+    <Compile Include="Request\GetTagRequest.cs" />
+    <Compile Include="Request\GetUserListRequest.cs" />
+    <Compile Include="Request\GetUserRequest.cs" />
+    <Compile Include="Request\MediaUploadRequest.cs" />
+    <Compile Include="Request\SendInviteRequest.cs" />
+    <Compile Include="Request\SendMessageRequest.cs" />
+    <Compile Include="Request\SetAgentRequest.cs" />
+    <Compile Include="Request\SimplelistUserRequest.cs" />
+    <Compile Include="Request\UpdateDepartmentRequest.cs" />
+    <Compile Include="Request\UpdateTagRequest.cs" />
+    <Compile Include="Request\UpdateUserRequest.cs" />
+    <Compile Include="Request\UserGetuserinfoRequest.cs" />
+    <Compile Include="Response\AddTagusersTagResponse.cs" />
+    <Compile Include="Response\AuthsuccUserResponse.cs" />
+    <Compile Include="Response\BatchDeleteUserResponse.cs" />
+    <Compile Include="Response\CreateDepartmentResponse.cs" />
+    <Compile Include="Response\CreateMenuResponse.cs" />
+    <Compile Include="Response\CreateTagResponse.cs" />
+    <Compile Include="Response\CreateUserResponse.cs" />
+    <Compile Include="Response\DeleteDepartmentResponse.cs" />
+    <Compile Include="Response\DeleteMenuResponse.cs" />
+    <Compile Include="Response\DeleteTagResponse.cs" />
+    <Compile Include="Response\DeleteUserResponse.cs" />
+    <Compile Include="Response\DelTagusersTagResponse.cs" />
+    <Compile Include="Response\GetAgentResponse.cs" />
+    <Compile Include="Response\GetCallbackIpResponse.cs" />
+    <Compile Include="Response\GetListDepartmentResponse.cs" />
+    <Compile Include="Response\GetListTagResponse.cs" />
+    <Compile Include="Response\GetMediaResponse.cs" />
+    <Compile Include="Response\GetMenuResponse.cs" />
+    <Compile Include="Response\GetTagResponse.cs" />
+    <Compile Include="Response\GetUserListResponse.cs" />
+    <Compile Include="Response\GetUserResponse.cs" />
+    <Compile Include="Response\MediaUploadResponse.cs" />
+    <Compile Include="Response\SendInviteResponse.cs" />
+    <Compile Include="Response\SendMessageResponse.cs" />
+    <Compile Include="Response\SetAgentResponse.cs" />
+    <Compile Include="Response\SimplelistUserResponse.cs" />
+    <Compile Include="Response\UpdateDepartmentResponse.cs" />
+    <Compile Include="Response\UpdateTagResponse.cs" />
+    <Compile Include="Response\UpdateUserResponse.cs" />
+    <Compile Include="Response\UserGetuserinfoResponse.cs" />
+    <Compile Include="SeedMessage\BaseMessage.cs" />
+    <Compile Include="SeedMessage\FileEntity.cs" />
+    <Compile Include="SeedMessage\FileMessage.cs" />
+    <Compile Include="SeedMessage\ImageEntity.cs" />
+    <Compile Include="SeedMessage\ImageMessage.cs" />
+    <Compile Include="SeedMessage\MpNewsEntity.cs" />
+    <Compile Include="SeedMessage\MpNewsList.cs" />
+    <Compile Include="SeedMessage\MpNewsMessage.cs" />
+    <Compile Include="SeedMessage\NewsEntity.cs" />
+    <Compile Include="SeedMessage\NewsList.cs" />
+    <Compile Include="SeedMessage\NewsMessage.cs" />
+    <Compile Include="SeedMessage\TextEntity.cs" />
+    <Compile Include="SeedMessage\TextMessage.cs" />
+    <Compile Include="SeedMessage\VideoEntity.cs" />
+    <Compile Include="SeedMessage\VideoMessage.cs" />
+    <Compile Include="SeedMessage\VoiceEntity.cs" />
+    <Compile Include="SeedMessage\VoiceMessage.cs" />
+    <Compile Include="TokenFachory\TokenCollection.cs" />
+    <Compile Include="TokenFachory\TokenManager.cs" />
+    <Compile Include="TokenFachory\TokenEntity.cs" />
+    <Compile Include="Helpers\AtsUtils.cs" />
+    <Compile Include="Helpers\CDATA.cs" />
+    <Compile Include="Crypt\Cryptography.cs" />
+    <Compile Include="Helpers\DefaultLoggercs.cs" />
+    <Compile Include="Helpers\Extend.cs" />
+    <Compile Include="Helpers\FileItem.cs" />
+    <Compile Include="Helpers\Iloger.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Domain\RequestImage.cs" />
+    <Compile Include="Helpers\WebUtils.cs" />
+    <Compile Include="WeiXinException.cs" />
+    <Compile Include="Helpers\WeiXinUtils.cs" />
+    <Compile Include="Crypt\WXBizMsgCrypt.cs" />
+    <Compile Include="Helpers\XmlHelper.cs" />
+    <Compile Include="WeiXinObject.cs" />
+    <Compile Include="WeiXinResponse.cs" />
+    <Compile Include="WeiXinSignature.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,5 @@
+D:\weisdk\trunk\WeiXin.Api\bin\Debug\Qhyhgf.WeiXin.Qy.api.dll
+D:\weisdk\trunk\WeiXin.Api\bin\Debug\Qhyhgf.WeiXin.Qy.api.pdb
+D:\weisdk\trunk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.Api.csprojResolveAssemblyReference.cache
+D:\weisdk\trunk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.api.dll
+D:\weisdk\trunk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.api.pdb

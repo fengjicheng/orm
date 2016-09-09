@@ -1,0 +1,7 @@
+D:\weisdk\trunk\Qhyhgf.Orm.Test\bin\Debug\Qhyhgf.Orm.Test.exe
+D:\weisdk\trunk\Qhyhgf.Orm.Test\bin\Debug\Qhyhgf.Orm.Test.pdb
+D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.csprojResolveAssemblyReference.cache
+D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.Properties.Resources.resources
+D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.csproj.GenerateResource.Cache
+D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.exe
+D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.pdb
