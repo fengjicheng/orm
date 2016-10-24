@@ -13,6 +13,7 @@ using System.Runtime.CompilerServices;
 //using  Q=Qhyhgf.Orm.ExpressionEx;
 using Qhyhgf.Orm.ExpressionEx;
 using Qhyhgf.Orm;
+using Moq;
 
 namespace Qhyhgf.Test
 {
@@ -53,6 +54,8 @@ namespace Qhyhgf.Test
         
         public Form1()
         {
+            var test = new Mock<TestFastItem>();
+            test.SetupProperty(e =>e.ID);
 
 
             SqlQuery<TestFastItem>  context = DbContext<TestFastItem>.Get();
