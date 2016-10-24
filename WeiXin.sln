@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qhyhgf.Model", "Qhyhgf.Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeiXin.WebApp", "WeiXin.WebApp\WeiXin.WebApp.csproj", "{68492C92-CB3A-48DD-B1BA-598DAF3C8B1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qhyhgf.Test", "Qhyhgf.Orm.Test\Qhyhgf.Test.csproj", "{FFA0B7E0-9A73-48A0-A72E-78220D4BB00A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qhyhgf.Orm.Test", "Qhyhgf.Orm.Test\Qhyhgf.Orm.Test.csproj", "{FFA0B7E0-9A73-48A0-A72E-78220D4BB00A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -47,6 +47,7 @@
     <Compile Include="Attribute\TableAttribute.cs" />
     <Compile Include="Attribute\ViewAttribute.cs" />
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="FastReflection\DynamicCompiler.cs" />
     <Compile Include="Exception\BuildExceptionHandler.cs" />
     <Compile Include="Cache\CacheHelper.cs" />
     <Compile Include="Cache\ICacheHelper.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="DbContext.cs" />
     <Compile Include="Exception\OrmException.cs" />
     <Compile Include="SqlHelper\SqlBehavior.cs" />
+    <Compile Include="Utils\ExceptionHelper.cs" />
     <Compile Include="Visitors\ExpressionToSql\BaseExpression2Sql.cs" />
     <Compile Include="Visitors\ExpressionToSql\Expre2Sql.cs" />
     <Compile Include="Visitors\ExpressionToSql\Expression2SqlCore.cs" />
