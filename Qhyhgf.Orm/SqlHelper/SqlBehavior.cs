@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.Common;
 using System.Data;
-
+using System.Data.Sql;
 namespace Qhyhgf.Orm.SqlHelper
 {
     /// <summary>
@@ -23,6 +23,10 @@ namespace Qhyhgf.Orm.SqlHelper
         /// <param name="commandText">字符串</param>
         /// <returns>响应行数</returns>
         int ExecuteNonQuery(CommandType commandType, string commandText);
+        /// <summary>
+        /// Command Object
+        /// </summary>
+        DbCommand Command { get; set; }
 
     }
 }
