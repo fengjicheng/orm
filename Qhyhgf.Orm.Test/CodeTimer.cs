@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-
+using Moq;
 namespace Qhyhgf.Test
 {
     public static class CodeTimer
@@ -15,6 +15,7 @@ namespace Qhyhgf.Test
         {
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
             Thread.CurrentThread.Priority = ThreadPriority.Highest;
+
             Time("", 1, () => { });
         }
 

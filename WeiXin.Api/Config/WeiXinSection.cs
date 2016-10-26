@@ -39,8 +39,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.Config
                         tokenItem.Name = value.Name;
                         tokenItem.Secret = value.Secret;
                         tokenItem.AccessToken = string.Empty;
-                        tokenItem.Token = Token;
-                        tokenItem.EncodingAESKey = EncodingAESKey;
                         collection.Add(tokenItem);
                     }
                 }
@@ -77,24 +75,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.Config
             {
                 return (WeiXinCollection)base[s_property];
             }
-        }
-        /// <summary>
-        /// Token值
-        /// </summary>
-        [ConfigurationProperty("Token", IsRequired = true)]
-        public string Token
-        {
-            get { return this["Token"].ToString(); }
-            set { this["Token"] = value; }
-        }
-        /// <summary>
-        /// EncodingAESKey值
-        /// </summary>
-        [ConfigurationProperty("EncodingAESKey", IsRequired = true)]
-        public string EncodingAESKey
-        {
-            get { return this["EncodingAESKey"].ToString(); }
-            set { this["EncodingAESKey"] = value; }
         }
         /// <summary>
         /// CorpID值

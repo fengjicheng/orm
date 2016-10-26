@@ -17,7 +17,24 @@ namespace Qhyhgf.WeiXin.Qy.Api.Config
             get { return this["AgentID"].ToString(); }
             set { this["AgentID"] = value; }
         }
-
+        /// <summary>
+        /// Token值
+        /// </summary>
+        [ConfigurationProperty("Token", IsRequired = true)]
+        public string Token
+        {
+            get { return this["Token"].ToString(); }
+            set { this["Token"] = value; }
+        }
+        /// <summary>
+        /// EncodingAESKey值
+        /// </summary>
+        [ConfigurationProperty("EncodingAESKey", IsRequired = true)]
+        public string EncodingAESKey
+        {
+            get { return this["EncodingAESKey"].ToString(); }
+            set { this["EncodingAESKey"] = value; }
+        }
         /// <summary>
         /// Secret值
         /// </summary>

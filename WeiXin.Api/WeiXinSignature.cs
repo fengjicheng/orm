@@ -2,8 +2,11 @@
 using System.Web;
 using System.Configuration;
 using System.Web.SessionState;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.IO;
 using Qhyhgf.WeiXin.Qy.Api.Domain;
 using Qhyhgf.WeiXin.Qy.Api.Config;
 using Qhyhgf.WeiXin.Qy.Api.Helpers;
@@ -35,11 +38,12 @@ namespace Qhyhgf.WeiXin.Qy.Api
             log.Error(context.Request.Url.ToString());
             string method = context.Request.HttpMethod;
             WeiXinSection section = getSection();
-            WXBizMsgCrypt crypt = new WXBizMsgCrypt(section.Token, section.EncodingAESKey, section.CorpID);
+            WXBizMsgCrypt crypt =new WXBizMsgCrypt("aaa","aa","aaa");
             //微信服务器将对服务器进行get请求，判断参数
             #region GET执行动作（服务器验证）
             if (method == "GET")
             {
+              //  crypt = new WXBizMsgCrypt(section.Token, section.EncodingAESKey, section.CorpID);
                 VerifyURL(crypt, context);
             }
             #endregion
@@ -99,14 +103,6 @@ namespace Qhyhgf.WeiXin.Qy.Api
             WeiXinSection section = WeiXinSection.GetInstance();
             try
             {
-                if (string.IsNullOrEmpty(section.Token))
-                {
-                    throw new WeiXinException("配置参数Token有误！");
-                }
-                if (string.IsNullOrEmpty(section.EncodingAESKey))
-                {
-                    throw new WeiXinException("配置参数EncodingAESKey有误！");
-                }
                 if (string.IsNullOrEmpty(section.CorpID))
                 {
                     throw new WeiXinException("配置参数CorpID有误！");
