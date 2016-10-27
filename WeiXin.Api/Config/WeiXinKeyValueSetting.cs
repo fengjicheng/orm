@@ -6,7 +6,7 @@ using System.Configuration;
 
 namespace Qhyhgf.WeiXin.Qy.Api.Config
 {
-    internal class WeiXinKeyValueSetting : ConfigurationElement	// 集合中的每个元素
+    public class WeiXinKeyValueSetting : ConfigurationElement	// 集合中的每个元素
     {
         /// <summary>
         /// 企业应用的id，整型

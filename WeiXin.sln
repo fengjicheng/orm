@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qhyhgf.Orm.Test", "Qhyhgf.O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qhyhgf.WeiXin.Qy.Api.Test", "Qhyhgf.WeiXin.Qy.Api.Test\Qhyhgf.WeiXin.Qy.Api.Test.csproj", "{90F1831A-9A05-412E-BD59-BD9B54842969}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "设计模式学习", "设计模式学习", "{61651F59-88EC-41D7-B299-01EA05C0826A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "策略模式(01)", "策略模式\策略模式(01).csproj", "{9CD9C7A9-899B-4C85-A257-F974B2824690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,8 +91,23 @@ Global
 		{90F1831A-9A05-412E-BD59-BD9B54842969}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{90F1831A-9A05-412E-BD59-BD9B54842969}.Release|x86.ActiveCfg = Release|Any CPU
 		{90F1831A-9A05-412E-BD59-BD9B54842969}.Release|x86.Build.0 = Release|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Debug|x86.Build.0 = Debug|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Release|x86.ActiveCfg = Release|Any CPU
+		{9CD9C7A9-899B-4C85-A257-F974B2824690}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CD9C7A9-899B-4C85-A257-F974B2824690} = {61651F59-88EC-41D7-B299-01EA05C0826A}
 	EndGlobalSection
 EndGlobal

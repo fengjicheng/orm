@@ -7,7 +7,7 @@ using System.Configuration;
 namespace Qhyhgf.WeiXin.Qy.Api.Config
 {
     [ConfigurationCollection(typeof(WeiXinKeyValueSetting))]
-    internal class WeiXinCollection : ConfigurationElementCollection		// 自定义一个集合
+    public class WeiXinCollection : ConfigurationElementCollection		// 自定义一个集合
     {
         // 基本上，所有的方法都只要简单地调用基类的实现就可以了。
 

@@ -7,7 +7,7 @@ using Qhyhgf.WeiXin.Qy.Api.TokenFachory;
 
 namespace Qhyhgf.WeiXin.Qy.Api.Config
 {
-    internal class WeiXinSection : ConfigurationSection
+    public class WeiXinSection : ConfigurationSection
     {
         private static WeiXinSection instance;
         private static object _lock = new object();
