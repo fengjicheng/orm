@@ -20,15 +20,15 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
         public override T GetResponse()
         {
             //判断是否需要身份验证
-            if (base.HttpMethod.IsToken)
+            if (base.HttpMethodAttribute.IsToken)
             {
                 base.Token.GetAccessToken();
-                base.HttpMethod.Url = base.HttpMethod.Url + WeiXinUtils.BuildGetUrl(base.HttpMethod.Url
+                base.HttpMethodAttribute.Url = base.HttpMethodAttribute.Url + WeiXinUtils.BuildGetUrl(base.HttpMethodAttribute.Url
                     ) + "access_token=" + base.Token.AccessToken;
             }
             WebUtils webutils = new WebUtils();
             //上传文件返回json
-            if (HttpMethod.Serialize == SerializeVerb.Json)
+            if (HttpMethodAttribute.Serialize == SerializeVerb.Json)
             {
                 Type type = base.Request.GetType();
                 //获得多媒体路径.
@@ -52,8 +52,8 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
                 if (File.Exists(strPath))
                 {
                     //在url里面添加文件类型
-                    HttpMethod.Url += "&type=" + mediaType.ToString().ToLower();            
-                    string strJson = webutils.DoPostFile(HttpMethod.Url, strPath);
+                    HttpMethodAttribute.Url += "&type=" + mediaType.ToString().ToLower();            
+                    string strJson = webutils.DoPostFile(HttpMethodAttribute.Url, strPath);
                     return strJson.jsonToObj<T>();
                 }
                 else
@@ -62,7 +62,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
                 }
             }
             ///返回byte 执行下载逻辑
-            if (HttpMethod.Serialize== SerializeVerb.Byte)
+            if (HttpMethodAttribute.Serialize== SerializeVerb.Byte)
             {
                 Type type = base.Request.GetType();
                 PropertyInfo[] finfos = type.GetProperties();
@@ -112,10 +112,10 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
                     sb.Remove(sb.Length - 1, 1);
                 }
                 ///得到请求Url
-                base.HttpMethod.Url = base.HttpMethod.Url + WeiXinUtils.BuildGetUrl(base.HttpMethod.Url
+                base.HttpMethodAttribute.Url = base.HttpMethodAttribute.Url + WeiXinUtils.BuildGetUrl(base.HttpMethodAttribute.Url
                        ) + sb.ToString();
                 string path = string.Empty;
-                byte[] stream = webutils.Download(HttpMethod.Url, out path);
+                byte[] stream = webutils.Download(HttpMethodAttribute.Url, out path);
                 GetMediaResponse response = new GetMediaResponse();
                 response.Stream =BytesToStream(stream);
                 response.Path = path;

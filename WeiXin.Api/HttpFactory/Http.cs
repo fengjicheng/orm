@@ -12,7 +12,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
     /// </summary>
     public class Http<T> where T : WeiXinResponse
     {
-        public HttpMethodAttribute HttpMethod { get; set; }
+        public HttpMethodAttribute HttpMethodAttribute { get; set; }
         public TokenEntity Token { get; set; }
         /// <summary>
         /// Request参数

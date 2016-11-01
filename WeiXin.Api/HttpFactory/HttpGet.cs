@@ -22,10 +22,10 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
         public override T GetResponse()
         {
             //判断是否需要身份验证
-            if (base.HttpMethod.IsToken)
+            if (base.HttpMethodAttribute.IsToken)
             {
                 base.Token.GetAccessToken();
-                base.HttpMethod.Url = base.HttpMethod.Url + WeiXinUtils.BuildGetUrl(base.HttpMethod.Url
+                base.HttpMethodAttribute.Url = base.HttpMethodAttribute.Url + WeiXinUtils.BuildGetUrl(base.HttpMethodAttribute.Url
                     ) + "access_token=" + base.Token.AccessToken;
             }
             Type type = base.Request.GetType();
@@ -77,11 +77,11 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
                 {
                     sb.Remove(sb.Length - 1, 1);
                 }
-                base.HttpMethod.Url = base.HttpMethod.Url + WeiXinUtils.BuildGetUrl(base.HttpMethod.Url
+                base.HttpMethodAttribute.Url = base.HttpMethodAttribute.Url + WeiXinUtils.BuildGetUrl(base.HttpMethodAttribute.Url
                       ) + sb.ToString();   
             }
             WebUtils webutils = new WebUtils();
-            string strJosn = webutils.DoGet(base.HttpMethod.Url);
+            string strJosn = webutils.DoGet(base.HttpMethodAttribute.Url);
             return strJosn.jsonToObj<T>();
         }
     }

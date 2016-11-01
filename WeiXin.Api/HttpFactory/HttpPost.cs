@@ -24,10 +24,10 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
             string getJosn=string.Empty, rjson=string.Empty;
             WebUtils webutils = new WebUtils();
             //判断是否需要身份验证
-            if (base.HttpMethod.IsToken)
+            if (base.HttpMethodAttribute.IsToken)
             {
                 base.Token.GetAccessToken();
-                base.HttpMethod.Url = base.HttpMethod.Url + WeiXinUtils.BuildGetUrl(base.HttpMethod.Url
+                base.HttpMethodAttribute.Url = base.HttpMethodAttribute.Url + WeiXinUtils.BuildGetUrl(base.HttpMethodAttribute.Url
                     ) + "access_token=" + base.Token.AccessToken;
             }
             //url参数组合
@@ -81,15 +81,15 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
                 {
                     sb.Remove(sb.Length - 1, 1);
                 }
-                base.HttpMethod.Url = base.HttpMethod.Url + WeiXinUtils.BuildGetUrl(base.HttpMethod.Url
+                base.HttpMethodAttribute.Url = base.HttpMethodAttribute.Url + WeiXinUtils.BuildGetUrl(base.HttpMethodAttribute.Url
               ) + sb.ToString();
             }
             
             //XML序列化
-            if (base.HttpMethod.Serialize == Attribute.SerializeVerb.Json)
+            if (base.HttpMethodAttribute.Serialize == Attribute.SerializeVerb.Json)
             {
                 rjson = Request.objToJson();
-                getJosn = webutils.DoPost(base.HttpMethod.Url, rjson);
+                getJosn = webutils.DoPost(base.HttpMethodAttribute.Url, rjson);
                 return getJosn.jsonToObj<T>();
             }
             return base.GetResponse();

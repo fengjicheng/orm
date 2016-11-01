@@ -22,7 +22,6 @@ namespace Qhyhgf.WeiXin.Qy.Api
         /// <summary>
         /// 对返回码的文本描述内容
         /// </summary>
-        [DefaultValue("")]
         [DataMember(Name = "errmsg",IsRequired=false)]
         public string ErrMsg { get; set; }
         public override string ToString()

@@ -39,12 +39,12 @@ namespace Qhyhgf.WeiXin.Qy.Api
         {
             //获得httpMethodAttribute数据.
             Type info = request.GetType();
-            var HttpInfo = (HttpMethodAttribute)System.Attribute.GetCustomAttribute(info, typeof(HttpMethodAttribute));
+            var HttpAttributeInfo = (HttpMethodAttribute)System.Attribute.GetCustomAttribute(info, typeof(HttpMethodAttribute));
             ///根据不同的请求方式
-            Http<T> http = HttpFactory<T>.CreateHttp(HttpInfo.Method);
+            Http<T> http = HttpFactory<T>.CreateHttp(HttpAttributeInfo.Method);
             //延签消息
             http.Token = Token;
-            http.HttpMethod = HttpInfo;
+            http.HttpMethodAttribute = HttpAttributeInfo;
             http.Request = request;
             return http.GetResponse();
         }

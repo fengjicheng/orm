@@ -200,7 +200,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
             req.ServicePoint.Expect100Continue = false;
             req.Method = method;
             req.KeepAlive = true;
-            req.UserAgent = "Qhyhgf.com";
+            req.UserAgent = "haosezhitu.com";
             req.Timeout = this._timeout;
 
             return req;
