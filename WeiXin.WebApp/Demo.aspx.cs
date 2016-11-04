@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Qhyhgf.WeiXin.Qy.Api;
+using Qhyhgf.WeiXin.Qy.Api.Config;
 
 namespace WeiXin.WebUi
 {
@@ -12,6 +13,10 @@ namespace WeiXin.WebUi
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            #region webconfig读取
+            WeiXinSection section = WeiXinSection.GetInstance();
+            
+            #endregion
             IWeiXinClient client = new DefaultWeiXinClient();
             Qhyhgf.WeiXin.Qy.Api.TokenFachory.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.TokenFachory.TokenEntity();
             Entity  = Qhyhgf.WeiXin.Qy.Api.TokenFachory.TokenManager.CreakDefault();
@@ -19,8 +24,7 @@ namespace WeiXin.WebUi
             Qhyhgf.WeiXin.Qy.Api.Request.MediaUploadRequest mediaUploadRequest = new Qhyhgf.WeiXin.Qy.Api.Request.MediaUploadRequest();
             mediaUploadRequest.Media = @"D:\WeiXin\trunk\WeiXin.WebApp\1.jpg";
             mediaUploadRequest.Type = Qhyhgf.WeiXin.Qy.Api.Domain.MediaType.Image;
-            Qhyhgf.WeiXin.Qy.Api.Response.MediaUploadResponse MediaUploadResponse
-                = client.Execute<Qhyhgf.WeiXin.Qy.Api.Response.MediaUploadResponse>(mediaUploadRequest);
+           // Qhyhgf.WeiXin.Qy.Api.Response.MediaUploadResponse MediaUploadResponse= client.Execute<Qhyhgf.WeiXin.Qy.Api.Response.MediaUploadResponse>(mediaUploadRequest);
         }
     }
 }

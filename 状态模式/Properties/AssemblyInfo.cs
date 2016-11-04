@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Qhyhgf.WeiXin.Qy.Api.Test")]
+[assembly: AssemblyTitle("状态模式")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Qhyhgf.WeiXin.Qy.Api.Test")]
+[assembly: AssemblyProduct("状态模式")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("18f19135-1079-4d8e-a727-55abb229fb9a")]
+[assembly: Guid("e0879c6e-0a93-410b-b722-767a28c1faab")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
