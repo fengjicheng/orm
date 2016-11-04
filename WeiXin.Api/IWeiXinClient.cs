@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Qhyhgf.WeiXin.Qy.Api.TokenFachory;
+using Qhyhgf.WeiXin.Qy.Api.Token;
 
 namespace Qhyhgf.WeiXin.Qy.Api
 {

@@ -196,9 +196,10 @@
     <Compile Include="SeedMessage\VideoMessage.cs" />
     <Compile Include="SeedMessage\VoiceEntity.cs" />
     <Compile Include="SeedMessage\VoiceMessage.cs" />
-    <Compile Include="TokenFachory\TokenCollection.cs" />
-    <Compile Include="TokenFachory\TokenManager.cs" />
-    <Compile Include="TokenFachory\TokenEntity.cs" />
+    <Compile Include="Token\ConfingToken.cs" />
+    <Compile Include="Token\ITokenState.cs" />
+    <Compile Include="Token\TokenManager.cs" />
+    <Compile Include="Token\TokenEntity.cs" />
     <Compile Include="Helpers\AtsUtils.cs" />
     <Compile Include="Helpers\CDATA.cs" />
     <Compile Include="Crypt\Cryptography.cs" />

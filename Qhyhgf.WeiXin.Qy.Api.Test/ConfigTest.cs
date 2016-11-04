@@ -6,7 +6,7 @@ using Qhyhgf.WeiXin.Qy.Api.Config;
 namespace Qhyhgf.WeiXin.Qy.Api.Test
 {
     [TestClass]
-    public class Config
+    public class ConfigTest
     {
         WeiXinSection section = WeiXinSection.GetInstance();
         [TestMethod]

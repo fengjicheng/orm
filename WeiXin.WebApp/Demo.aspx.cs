@@ -18,8 +18,8 @@ namespace WeiXin.WebUi
             
             #endregion
             IWeiXinClient client = new DefaultWeiXinClient();
-            Qhyhgf.WeiXin.Qy.Api.TokenFachory.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.TokenFachory.TokenEntity();
-            Entity  = Qhyhgf.WeiXin.Qy.Api.TokenFachory.TokenManager.CreakDefault();
+            Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity();
+           // Entity  = Qhyhgf.WeiXin.Qy.Api.Token.TokenManager.CreakDefault();
             client.Token = Entity;
             Qhyhgf.WeiXin.Qy.Api.Request.MediaUploadRequest mediaUploadRequest = new Qhyhgf.WeiXin.Qy.Api.Request.MediaUploadRequest();
             mediaUploadRequest.Media = @"D:\WeiXin\trunk\WeiXin.WebApp\1.jpg";

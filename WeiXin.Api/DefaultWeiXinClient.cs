@@ -8,7 +8,7 @@ using Qhyhgf.WeiXin.Qy.Api.Helpers;
 using Qhyhgf.WeiXin.Qy.Api.Attribute;
 using Qhyhgf.WeiXin.Qy.Api.Config;
 using Qhyhgf.WeiXin.Qy.Api.HttpFactory;
-using Qhyhgf.WeiXin.Qy.Api.TokenFachory;
+using Qhyhgf.WeiXin.Qy.Api.Token;
 
 namespace Qhyhgf.WeiXin.Qy.Api
 {

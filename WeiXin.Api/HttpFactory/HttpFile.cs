@@ -22,7 +22,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.HttpFactory
             //判断是否需要身份验证
             if (base.HttpMethodAttribute.IsToken)
             {
-                base.Token.GetAccessToken();
                 base.HttpMethodAttribute.Url = base.HttpMethodAttribute.Url + WeiXinUtils.BuildGetUrl(base.HttpMethodAttribute.Url
                     ) + "access_token=" + base.Token.AccessToken;
             }

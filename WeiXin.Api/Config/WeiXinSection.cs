@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Configuration;
-using Qhyhgf.WeiXin.Qy.Api.TokenFachory;
+using Qhyhgf.WeiXin.Qy.Api.Token;
 
 namespace Qhyhgf.WeiXin.Qy.Api.Config
 {
@@ -17,33 +17,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.Config
         private WeiXinSection()
         {
         
-        }
-        /// <summary>
-        /// 把config读取到的内容转化到Token
-        /// </summary>
-        /// <returns></returns>
-        public TokenCollection ToTokenCollection()
-        {
-            TokenCollection collection = new TokenCollection();
-            foreach (var item in KeyValues)
-            {
-                TokenEntity tokenItem = new TokenEntity();
-                if (item is WeiXinKeyValueSetting)
-                {
-                    lock (_lock)
-                    {
-                        WeiXinKeyValueSetting value = item as WeiXinKeyValueSetting;
-                        tokenItem.CorpID = CorpID;
-                        tokenItem.EndRequest = DateTime.Now.AddSeconds(-int.MaxValue);
-                        tokenItem.AgentID = value.AgentID;
-                        tokenItem.Name = value.Name;
-                        tokenItem.Secret = value.Secret;
-                        tokenItem.AccessToken = string.Empty;
-                        collection.Add(tokenItem);
-                    }
-                }
-            }
-            return collection;
         }
         public static WeiXinSection GetInstance()
         {
