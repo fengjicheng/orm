@@ -1,0 +1,491 @@
+
+ 
+记录时间：2016-11-14 16:15:57,499 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://localhost:3483/Qhyhgf.WeiXin.Qy.api.dll
+ 
+
+ 
+记录时间：2016-11-14 16:16:26,581 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://localhost:3483/Qhyhgf.WeiXin.Qy.api.dll?AgentID=0
+ 
+
+ 
+记录时间：2016-11-14 16:42:05,487 
+线程ID:[50] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 16:42:05,513 
+线程ID:[50] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 04:42:05   url:
+ 
+
+ 
+记录时间：2016-11-14 16:42:05,514 
+线程ID:[50] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://localhost:3483/Qhyhgf.WeiXin.Qy.api.dll?AgentID=0
+ 
+
+ 
+记录时间：2016-11-14 16:43:01,223 
+线程ID:[53] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 16:43:01,245 
+线程ID:[53] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 04:43:01   url:
+ 
+
+ 
+记录时间：2016-11-14 16:43:01,246 
+线程ID:[53] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://localhost:3483/Qhyhgf.WeiXin.Qy.api.dll
+ 
+
+ 
+记录时间：2016-11-14 21:55:45,592 
+线程ID:[8] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 21:55:45,726 
+线程ID:[8] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 09:55:45   url:
+ 
+
+ 
+记录时间：2016-11-14 21:55:45,727 
+线程ID:[8] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy
+ 
+
+ 
+记录时间：2016-11-14 21:57:59,306 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 21:57:59,308 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 09:57:59   url:
+ 
+
+ 
+记录时间：2016-11-14 21:57:59,309 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=bb92238efa9ec15083921a187fd24f629421ba58&timestamp=1479131877&nonce=612180745&echostr=kEPwtUxihw5gUdGXcIR63qm/bovln+oCgh612UVguAUsQPbRz5XdsMphxFewcc655gQ4BShcwegd4O0NH08eTA==
+ 
+
+ 
+记录时间：2016-11-14 21:59:28,774 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 21:59:28,776 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 09:59:28   url:
+ 
+
+ 
+记录时间：2016-11-14 21:59:28,776 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=e6e43a175c46d0f22ff3d89e75a6661371c44b08&timestamp=1479131966&nonce=740026893
+ 
+
+ 
+记录时间：2016-11-14 21:59:30,001 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 21:59:30,002 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 09:59:30   url:
+ 
+
+ 
+记录时间：2016-11-14 21:59:30,002 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=2087a845688ed4abe539b4d490b83299572a19a5&timestamp=1479131967&nonce=1730596209
+ 
+
+ 
+记录时间：2016-11-14 21:59:47,306 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 21:59:47,308 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 09:59:47   url:
+ 
+
+ 
+记录时间：2016-11-14 21:59:47,308 
+线程ID:[5] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=3529346d43e07e3fb346bdabacad6149a8120a74&timestamp=1479131985&nonce=1381470936
+ 
+
+ 
+记录时间：2016-11-14 22:00:07,868 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:00:07,869 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:00:07   url:
+ 
+
+ 
+记录时间：2016-11-14 22:00:07,870 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=326ebbc51bb9faf71fbceafe4d398842a400a3cd&timestamp=1479132005&nonce=575011124
+ 
+
+ 
+记录时间：2016-11-14 22:00:34,405 
+线程ID:[21] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:00:34,406 
+线程ID:[21] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:00:34   url:
+ 
+
+ 
+记录时间：2016-11-14 22:00:34,408 
+线程ID:[21] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=c446787b854a4e4cc44638e9bc7f58b2f4cdd903&timestamp=1479132032&nonce=1424136837
+ 
+
+ 
+记录时间：2016-11-14 22:00:35,053 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:00:35,054 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:00:35   url:
+ 
+
+ 
+记录时间：2016-11-14 22:00:35,055 
+线程ID:[9] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=9aff4b6db5a324958ce9beb12f96e2e1aa542235&timestamp=1479132033&nonce=219167074
+ 
+
+ 
+记录时间：2016-11-14 22:05:11,325 
+线程ID:[23] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:05:11,358 
+线程ID:[23] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:05:11   url:
+ 
+
+ 
+记录时间：2016-11-14 22:05:11,359 
+线程ID:[23] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=cb783d956be5f4d4173f137e78b23c229f4f42a0&timestamp=1479132309&nonce=1977547481
+ 
+
+ 
+记录时间：2016-11-14 22:05:17,031 
+线程ID:[15] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:05:17,031 
+线程ID:[26] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:05:17,034 
+线程ID:[26] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:05:17   url:
+ 
+
+ 
+记录时间：2016-11-14 22:05:17,035 
+线程ID:[26] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=cb783d956be5f4d4173f137e78b23c229f4f42a0&timestamp=1479132309&nonce=1977547481
+ 
+
+ 
+记录时间：2016-11-14 22:05:17,032 
+线程ID:[15] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:05:17   url:
+ 
+
+ 
+记录时间：2016-11-14 22:05:20,176 
+线程ID:[15] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=12ce00428322a793b78515eab827adbce79ac3aa&timestamp=1479132310&nonce=471737616
+ 
+
+ 
+记录时间：2016-11-14 22:05:24,563 
+线程ID:[25] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:05:24,566 
+线程ID:[25] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:05:24   url:
+ 
+
+ 
+记录时间：2016-11-14 22:05:24,574 
+线程ID:[25] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=12ce00428322a793b78515eab827adbce79ac3aa&timestamp=1479132310&nonce=471737616
+ 
+
+ 
+记录时间：2016-11-14 22:05:27,048 
+线程ID:[30] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:05:27,049 
+线程ID:[30] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:05:27   url:
+ 
+
+ 
+记录时间：2016-11-14 22:05:27,049 
+线程ID:[30] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=cb783d956be5f4d4173f137e78b23c229f4f42a0&timestamp=1479132309&nonce=1977547481
+ 
+
+ 
+记录时间：2016-11-14 22:05:33,900 
+线程ID:[28] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:05:33,905 
+线程ID:[28] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:05:33   url:
+ 
+
+ 
+记录时间：2016-11-14 22:05:33,905 
+线程ID:[28] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=12ce00428322a793b78515eab827adbce79ac3aa&timestamp=1479132310&nonce=471737616
+ 
+
+ 
+记录时间：2016-11-14 22:07:28,889 
+线程ID:[26] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:07:31,500 
+线程ID:[29] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:07:32,108 
+线程ID:[26] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:07:30   url:
+ 
+
+ 
+记录时间：2016-11-14 22:07:32,116 
+线程ID:[29] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:07:32   url:
+ 
+
+ 
+记录时间：2016-11-14 22:07:33,181 
+线程ID:[29] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=33e5b2b08a6ad37256c326f64f915a87d0ad8d47&timestamp=1479132441&nonce=1026620229
+ 
+
+ 
+记录时间：2016-11-14 22:07:51,482 
+线程ID:[23] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：
+
+ 
+
+ 
+记录时间：2016-11-14 22:07:51,483 
+线程ID:[23] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：2016/11/14 10:07:51   url:
+ 
+
+ 
+记录时间：2016-11-14 22:07:51,484 
+线程ID:[23] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=33e5b2b08a6ad37256c326f64f915a87d0ad8d47&timestamp=1479132441&nonce=1026620229
+ 
+
+ 
+记录时间：2016-11-14 22:07:55,157 
+线程ID:[26] 
+日志级别：  ERROR 
+出错类：Qhyhgf.WeiXin.Qy.Api.Helpers.DefaultLoggercs property: [(null)] - 
+错误描述：http://caoxiancc.xicp.net:3483/weixin.qy?AgentID=0&msg_signature=33e5b2b08a6ad37256c326f64f915a87d0ad8d47&timestamp=1479132441&nonce=1026620229
+ 

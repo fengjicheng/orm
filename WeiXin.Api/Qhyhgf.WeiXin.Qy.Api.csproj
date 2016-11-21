@@ -122,6 +122,7 @@
     <Compile Include="Request\AddTagusersTagRequest.cs" />
     <Compile Include="Request\AuthsuccUserRequest.cs" />
     <Compile Include="Request\BatchDeleteUserRequest.cs" />
+    <Compile Include="Request\ConvertToOpenidRequest.cs" />
     <Compile Include="Request\CreateDepartmentRequest.cs" />
     <Compile Include="Request\CreateMenuRequest.cs" />
     <Compile Include="Request\CreateTagRequest.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Request\GetMediaRequest.cs" />
     <Compile Include="Request\GetMenuRequest.cs" />
     <Compile Include="Request\GetTagRequest.cs" />
+    <Compile Include="Request\GetUserInfoRequest.cs" />
     <Compile Include="Request\GetUserListRequest.cs" />
     <Compile Include="Request\GetUserRequest.cs" />
     <Compile Include="Request\MediaUploadRequest.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="Response\AddTagusersTagResponse.cs" />
     <Compile Include="Response\AuthsuccUserResponse.cs" />
     <Compile Include="Response\BatchDeleteUserResponse.cs" />
+    <Compile Include="Response\ConvertToOpenidResponse.cs" />
     <Compile Include="Response\CreateDepartmentResponse.cs" />
     <Compile Include="Response\CreateMenuResponse.cs" />
     <Compile Include="Response\CreateTagResponse.cs" />
@@ -168,6 +171,7 @@
     <Compile Include="Response\GetMediaResponse.cs" />
     <Compile Include="Response\GetMenuResponse.cs" />
     <Compile Include="Response\GetTagResponse.cs" />
+    <Compile Include="Response\GetUserInfoResponse.cs" />
     <Compile Include="Response\GetUserListResponse.cs" />
     <Compile Include="Response\GetUserResponse.cs" />
     <Compile Include="Response\MediaUploadResponse.cs" />

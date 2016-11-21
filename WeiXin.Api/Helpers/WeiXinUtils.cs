@@ -21,6 +21,30 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
             return System.Web.HttpUtility.UrlEncode(str, Encoding.UTF8);
         }
         /// <summary>
+        /// 拼接AuthUrl地址用于企业获取code
+        /// </summary>
+        /// <param name="appid">企业的CorpID</param>
+        /// <param name="redirect_uri"授权后重定向的回调链接地址，请使用urlencode对链接进行处理></param>
+        /// <param name="state">重定向后会带上state参数，企业可以填写a-zA-Z0-9的参数值，长度不可超过128个字节</param>
+        /// <returns></returns>
+        public static string AauthJumpUrl(string appid,string redirect_uri,string state = null)
+        {
+            StringBuilder urls = new StringBuilder();
+            urls.Append("https://open.weixin.qq.com/connect/oauth2/authorize?appid=");
+            urls.Append(appid);
+            urls.Append("&redirect_uri=");
+            //授权后重定向的回调链接地址，请使用urlencode对链接进行处理
+            urls.Append(UrlEncode(redirect_uri));
+            urls.Append("&response_type=code&scope=SCOPE");
+            if (!string.IsNullOrEmpty(state))
+            {
+                urls.Append("&state=");
+                urls.Append(state);
+            }
+            urls.Append("#wechat_redirect");
+            return urls.ToString();
+        }
+        /// <summary>
         /// 向页面输出js代码。
         /// </summary>
         /// <param name="javascript">要执行的代码</param>

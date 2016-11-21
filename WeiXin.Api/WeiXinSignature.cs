@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using Qhyhgf.WeiXin.Qy.Api.Domain;
 using Qhyhgf.WeiXin.Qy.Api.Config;
 using Qhyhgf.WeiXin.Qy.Api.Helpers;
 using Qhyhgf.WeiXin.Qy.Api.Crypt;
+using Qhyhgf.WeiXin.Qy.Api.Token;
+
 namespace Qhyhgf.WeiXin.Qy.Api
 {
     public class WeiXinSignature : IHttpHandler,IRequiresSessionState, IReadOnlySessionState 
@@ -35,10 +36,20 @@ namespace Qhyhgf.WeiXin.Qy.Api
         /// <param name="context"></param>
         public void ProcessRequest(HttpContext context)
         {
+            log.Error("\n");
+            log.Error(DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss   url:"));
             log.Error(context.Request.Url.ToString());
             string method = context.Request.HttpMethod;
-            WeiXinSection section = getSection();
-            WXBizMsgCrypt crypt =new WXBizMsgCrypt("aaa","aa","aaa");
+            //获取AgentID
+            string agentID = context.Request.QueryString["AgentID"];
+            if (string.IsNullOrEmpty(agentID))
+            {
+                agentID = "0";
+            }
+            //根据AgentID 获取配置信息
+            TokenManager manger = new TokenManager();
+            TokenEntity entiy = manger.GetToken(agentID);
+            WXBizMsgCrypt crypt = new WXBizMsgCrypt(entiy.Token, entiy.EncodingAESKey, entiy.CorpID);
             //微信服务器将对服务器进行get请求，判断参数
             #region GET执行动作（服务器验证）
             if (method == "GET")
@@ -48,7 +59,7 @@ namespace Qhyhgf.WeiXin.Qy.Api
             }
             #endregion
             #region POST执行动作（微信发过来的消息）
-            else  if (method == "POST")
+            else
             {
                string  postString = GetPostString(crypt,context);
                
@@ -115,6 +126,11 @@ namespace Qhyhgf.WeiXin.Qy.Api
             }
  
         }
+        /// <summary>
+        /// 验证url地址
+        /// </summary>
+        /// <param name="_crypt"></param>
+        /// <param name="_context"></param>
         private void VerifyURL(WXBizMsgCrypt _crypt, HttpContext _context)
         {
             string msg_signature = _context.Request.QueryString["msg_signature"];
