@@ -13,7 +13,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     /// </summary>
     [Serializable]
     [DataContract]
-    [HttpMethod(Method = HttpVerb.Get, Url = "https://qyapi.weixin.qq.com/cgi-bin/menu/delete", Name = "删除菜单", IsToken = true, Serialize = SerializeVerb.Json)]
+    [HttpMethod(Method = HttpVerb.Get, Url = "https://qyapi.weixin.qq.com/cgi-bin/menu/delete", Name = "删除菜单", IsToken = true, Serialize = SerializeVerb.None)]
     public class DeleteMenuRequest : IWeiXinRequest<DeleteMenuResponse>
     {
         /// <summary>

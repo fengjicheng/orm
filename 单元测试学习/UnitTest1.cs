@@ -27,7 +27,7 @@ namespace 单元测试学习
         [TestCase(1)]
         public void TestMethod1(string arg)
         {
-            if (test== "测试之前运行")
+            if (test!= "测试之前运行")
             {
                 //测试通过
                 Assert.Pass();

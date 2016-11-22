@@ -78,6 +78,7 @@
     <Compile Include="ConfigTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SendMsg.cs" />
+    <Compile Include="MenuTest.cs" />
     <Compile Include="TokenTest.cs" />
   </ItemGroup>
   <ItemGroup>

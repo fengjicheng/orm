@@ -27,5 +27,16 @@ namespace Qhyhgf.WeiXin.Qy.Api.Test
             MediaUploadResponse MediaUploadResponse = client.Execute<MediaUploadResponse>(mediaUploadRequest);
             Assert.IsNotNull(MediaUploadResponse.MediaId);
         }
+        [TestMethod]
+        public void AgentList()
+        {
+            TokenManager manger = new TokenManager();
+            TokenEntity entiy = manger.GetToken("0");
+            IWeiXinClient client = new DefaultWeiXinClient();
+            client.Token = entiy;
+            AgentListRequest AgentListRequest = new AgentListRequest();
+            AgentListResponse MediaUploadResponse = client.Execute<AgentListResponse>(AgentListRequest);
+            Assert.AreEqual(MediaUploadResponse.ErrCode,0);
+        }
     }
 }

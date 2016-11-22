@@ -50,11 +50,21 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         /// 是否接收用户变更通知。0：不接收；1：接收
         /// </summary>
         [DataMember(Name = "isreportuser")]
-        public int isreportuser { get; set; }
+        public int Isreportuser { get; set; }
         /// <summary>
         /// 是否上报用户进入应用事件。0：不接收；1：接收
         /// </summary>
         [DataMember(Name = "isreportenter")]
-        public int isreportenter { get; set; }
+        public int Isreportenter { get; set; }
+        /// <summary>
+        /// 主页型应用url。url必须以http或者https开头。消息型应用无需该参数
+        /// </summary>
+        [DataMember(Name = "home_url")]
+        public int HomeUrl { get; set; }
+        /// <summary>
+        /// 关联会话url。设置该字段后，企业会话"+"号将出现该应用，点击应用可直接跳转到此url，支持jsapi向当前会话发送消息。
+        /// </summary>
+        [DataMember(Name = "chat_extension_url")]
+        public int ChatExtensionUrl { get; set; }
     }
 }

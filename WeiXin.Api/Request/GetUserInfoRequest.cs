@@ -17,7 +17,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     {
         /// <summary>
         /// 通过成员授权获取到的code，每次成员授权带上的code将不一样，code只能使用一次，10分钟未被使用自动过期
-        /// 可以使用 Qhyhgf.WeiXin.Qy.Api.Helpers.AauthJumpUrl构造跳转地址获得code
+        /// 可以使用 Qhyhgf.WeiXin.Qy.Api.Helpers.JumpAauthUrl构造跳转地址获得code
         /// </summary>
         [DataMember(Name = "code", IsRequired = true)]
         public string Code { get; set; }

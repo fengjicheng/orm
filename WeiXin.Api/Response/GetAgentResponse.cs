@@ -48,7 +48,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Response
         [DataMember(Name = "allow_partys")]
         public AllowPartysEntity AllowPartys { get; set; }
         /// <summary>
-        /// 企业应用可见范围（部门）
+        /// 企业应用可见范围（标签）
         /// </summary>
         [DataMember(Name = "allow_tags")]
         public AllowTagsEntity AllowTags { get; set; }
@@ -77,8 +77,16 @@ namespace Qhyhgf.WeiXin.Qy.Api.Response
         /// </summary>
         [DataMember(Name = "isreportenter")]
         public int isreportenter { get; set; }
-
-
+        /// <summary>
+        /// 应用类型。1：消息型；2：主页型
+        /// </summary>
+        [DataMember(Name = "type")]
+        public int Type { get; set; }
+        /// <summary>
+        ///关联会话url
+        /// </summary>
+        [DataMember(Name = "chat_extension_url")]
+        public string ChatExtensionUrl { get; set; }
 
     }
 }

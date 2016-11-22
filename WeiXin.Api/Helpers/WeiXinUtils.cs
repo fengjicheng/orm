@@ -21,13 +21,38 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
             return System.Web.HttpUtility.UrlEncode(str, Encoding.UTF8);
         }
         /// <summary>
+        /// 企业或服务商网站引导用户进入登录授权页
+        /// </summary>
+        /// <param name="corp_id">服务商的CorpID或者企业的CorpID</param>
+        /// <param name="redirect_uri">授权登录之后目的跳转网址，所在域名需要与登录授权域名一致</param>
+        /// <param name="usertype">redirect_uri支持登录的类型，有member(成员登录)、admin(管理员登录)、all(成员或管理员皆可登录)，默认值为admin</param>
+        /// <param name="state">用于企业或服务商自行校验session，防止跨域攻击</param>
+        /// <returns></returns>
+        public static string LoginPageUrl(string corp_id, string redirect_uri, string usertype= "member", string state = null)
+        {
+            StringBuilder urls = new StringBuilder();
+            urls.Append("https://qy.weixin.qq.com/cgi-bin/loginpage?corp_id=");
+            urls.Append(corp_id);
+            urls.Append("&redirect_uri=");
+            //授权后重定向的回调链接地址，请使用urlencode对链接进行处理
+            urls.Append(UrlEncode(redirect_uri));
+            if (!string.IsNullOrEmpty(state))
+            {
+                urls.Append("&state=");
+                urls.Append(state);
+            }
+            urls.Append("&usertype=");
+            urls.Append(usertype);
+            return urls.ToString();
+        }
+        /// <summary>
         /// 拼接AuthUrl地址用于企业获取code
         /// </summary>
         /// <param name="appid">企业的CorpID</param>
         /// <param name="redirect_uri"授权后重定向的回调链接地址，请使用urlencode对链接进行处理></param>
         /// <param name="state">重定向后会带上state参数，企业可以填写a-zA-Z0-9的参数值，长度不可超过128个字节</param>
         /// <returns></returns>
-        public static string AauthJumpUrl(string appid,string redirect_uri,string state = null)
+        public static string JumpAauthUrl(string appid,string redirect_uri,string state = null)
         {
             StringBuilder urls = new StringBuilder();
             urls.Append("https://open.weixin.qq.com/connect/oauth2/authorize?appid=");

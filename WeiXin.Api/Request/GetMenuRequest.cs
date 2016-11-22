@@ -11,7 +11,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     /// <summary>
     /// 获取菜单列表
     /// </summary>
-    [HttpMethod(Method = HttpVerb.Get, Url = "https://qyapi.weixin.qq.com/cgi-bin/menu/get", Name = "获取菜单列表", IsToken = true, Serialize = SerializeVerb.Json)]
+    [HttpMethod(Method = HttpVerb.Get, Url = "https://qyapi.weixin.qq.com/cgi-bin/menu/get", Name = "获取菜单列表", IsToken = true, Serialize = SerializeVerb.None)]
     public class GetMenuRequest : IWeiXinRequest<GetMenuResponse>
     {
         /// <summary>

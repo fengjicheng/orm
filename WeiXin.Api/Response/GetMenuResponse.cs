@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using Qhyhgf.WeiXin.Qy.Api.Domain;
+using Qhyhgf.WeiXin.Qy.Api.Domain.Menu;
 
 namespace Qhyhgf.WeiXin.Qy.Api.Response
 {
