@@ -54,7 +54,6 @@ namespace Qhyhgf.WeiXin.Qy.Api
             #region GET执行动作（服务器验证）
             if (method == "GET")
             {
-              //  crypt = new WXBizMsgCrypt(section.Token, section.EncodingAESKey, section.CorpID);
                 VerifyURL(crypt, context);
             }
             #endregion
@@ -104,7 +103,22 @@ namespace Qhyhgf.WeiXin.Qy.Api
             }
             return sMsg;
         }
-        
+        private void WriteMeasge(WXBizMsgCrypt _crypt, HttpContext _context,string msgxml)
+        {
+            string msg_signature = _context.Request.QueryString["msg_signature"];
+            string timestamp = _context.Request.QueryString["timestamp"];
+            string nonce = _context.Request.QueryString["nonce"];
+            string encrypMsgxml = string.Empty;
+            int ret = _crypt.EncryptMsg(msgxml, timestamp, nonce, ref encrypMsgxml);
+            if (ret != 0)
+            {
+                throw new WeiXinException("ERR: Decrypt fail, ret: " + ret);
+            }
+            else
+            {
+                _context.Response.Write(encrypMsgxml);
+            }
+        }
         /// <summary>
         /// 获得section
         /// </summary>

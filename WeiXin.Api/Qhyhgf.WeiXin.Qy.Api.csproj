@@ -120,6 +120,8 @@
     <Compile Include="Dynamic\MethodWrapper.cs" />
     <Compile Include="Dynamic\PropertyWrapper.cs" />
     <Compile Include="Dynamic\ReflectionExtensions.cs" />
+    <Compile Include="Handler\IEventHandler.cs" />
+    <Compile Include="Handler\IMessageContext.cs" />
     <Compile Include="HttpFactory\Http.cs" />
     <Compile Include="HttpFactory\HttpFactory.cs" />
     <Compile Include="HttpFactory\HttpFile.cs" />
