@@ -20,6 +20,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
         {
             return System.Web.HttpUtility.UrlEncode(str, Encoding.UTF8);
         }
+
         /// <summary>
         /// 企业或服务商网站引导用户进入登录授权页
         /// </summary>
@@ -44,6 +45,24 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
             urls.Append("&usertype=");
             urls.Append(usertype);
             return urls.ToString();
+        }
+        /// <summary>
+        /// 生成时间戳，标准北京时间，时区为东八区，自1970年1月1日 0点0分0秒以来的秒数
+        /// </summary>
+        /// <returns>时间戳</returns>
+        private static string GetTimeStamp()
+        {
+            TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            return Convert.ToInt64(ts.TotalSeconds).ToString();
+        }
+
+        /// <summary>
+        /// 生成随机串，随机串包含字母或数字
+        /// </summary>
+        /// <returns>随机串</returns>
+        private static string GetNonceStr()
+        {
+            return Guid.NewGuid().ToString().Replace("-", "");
         }
         /// <summary>
         /// 拼接AuthUrl地址用于企业获取code

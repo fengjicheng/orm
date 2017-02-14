@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Qhyhgf.WeiXin.Qy.Api</RootNamespace>
     <AssemblyName>Qhyhgf.WeiXin.Qy.api</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -61,6 +61,7 @@
     <Compile Include="Attribute\SerializeVerb.cs" />
     <Compile Include="Crypt\Sample.cs" />
     <Compile Include="Domain\AgentEntity.cs" />
+    <Compile Include="Domain\CallbackEntity.cs" />
     <Compile Include="Domain\Menu\ClickEvent.cs" />
     <Compile Include="Domain\Menu\MenuEventBase.cs" />
     <Compile Include="Domain\Menu\LocationSelectEvent.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Request\AgentListRequest.cs" />
     <Compile Include="Request\AuthsuccUserRequest.cs" />
     <Compile Include="Request\BatchDeleteUserRequest.cs" />
+    <Compile Include="Request\BatchReplacepartyRequest.cs" />
     <Compile Include="Request\ConvertToOpenidRequest.cs" />
     <Compile Include="Request\ConvertToUseridRequest.cs" />
     <Compile Include="Request\CreateDepartmentRequest.cs" />
@@ -149,7 +151,7 @@
     <Compile Include="Request\DelTagusersTagRequest.cs" />
     <Compile Include="Request\GetAgentRequest.cs" />
     <Compile Include="Request\GetCallbackIpRequest.cs" />
-    <Compile Include="Request\GetListDepartmentRequest.cs" />
+    <Compile Include="Request\DepartmentListRequest.cs" />
     <Compile Include="Request\GetListTagRequest.cs" />
     <Compile Include="Request\GetMediaRequest.cs" />
     <Compile Include="Request\GetMenuRequest.cs" />
@@ -170,6 +172,7 @@
     <Compile Include="Response\AgentListResponse.cs" />
     <Compile Include="Response\AuthsuccUserResponse.cs" />
     <Compile Include="Response\BatchDeleteUserResponse.cs" />
+    <Compile Include="Response\BatchReplacepartyResponse.cs" />
     <Compile Include="Response\ConvertToOpenidResponse.cs" />
     <Compile Include="Response\ConvertToUseridResponse.cs" />
     <Compile Include="Response\CreateDepartmentResponse.cs" />
@@ -183,7 +186,7 @@
     <Compile Include="Response\DelTagusersTagResponse.cs" />
     <Compile Include="Response\GetAgentResponse.cs" />
     <Compile Include="Response\GetCallbackIpResponse.cs" />
-    <Compile Include="Response\GetListDepartmentResponse.cs" />
+    <Compile Include="Response\DepartmentListResponse.cs" />
     <Compile Include="Response\GetListTagResponse.cs" />
     <Compile Include="Response\GetMediaResponse.cs" />
     <Compile Include="Response\GetMenuResponse.cs" />
