@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Web.UI;
 
@@ -9,7 +10,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
     /// <summary>
     /// 微信工具类
     /// </summary>
-    public abstract class WeiXinUtils
+    public  class WeiXinUtils
     {
         /// <summary>
         /// url编码；
@@ -20,7 +21,40 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
         {
             return System.Web.HttpUtility.UrlEncode(str, Encoding.UTF8);
         }
+        /// <summary>
+        /// 签名算法
+        /// </summary>
+        /// <param name="jsapi_ticket">jsapi_ticket</param>
+        /// <param name="noncestr">随机字符串</param>
+        /// <param name="timestamp">时间戳</param>
+        /// <param name="url">当前网页的URL，不包含#及其后面部分(必须是调用JS接口页面的完整URL)</param>
+        /// <returns></returns>
+        public static string GetSignature(string jsapi_ticket, string noncestr, string timestamp, string url)
+        {
+            var string1Builder = new StringBuilder();
+            string1Builder.Append("jsapi_ticket=").Append(jsapi_ticket).Append("&")
+                          .Append("noncestr=").Append(noncestr).Append("&")
+                          .Append("timestamp=").Append(timestamp).Append("&")
+                          .Append("url=").Append(url.IndexOf("#") >= 0 ? url.Substring(0, url.IndexOf("#")) : url);
+            string string1 = string1Builder.ToString();
+            return Sha1(string1);
+        }
 
+        /// <summary>
+        /// Sha1
+        /// </summary>
+        /// <param name="orgStr"></param>
+        /// <param name="encode"></param>
+        /// <returns></returns>
+        public static string Sha1(string orgStr, string encode = "UTF-8")
+        {
+            var sha1 = new SHA1Managed();
+            var sha1bytes = System.Text.Encoding.GetEncoding(encode).GetBytes(orgStr);
+            byte[] resultHash = sha1.ComputeHash(sha1bytes);
+            string sha1String = BitConverter.ToString(resultHash).ToLower();
+            sha1String = sha1String.Replace("-", "");
+            return sha1String;
+        }
         /// <summary>
         /// 企业或服务商网站引导用户进入登录授权页
         /// </summary>

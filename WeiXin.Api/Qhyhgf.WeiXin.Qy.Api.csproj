@@ -138,6 +138,7 @@
     <Compile Include="Request\AuthsuccUserRequest.cs" />
     <Compile Include="Request\BatchDeleteUserRequest.cs" />
     <Compile Include="Request\BatchReplacepartyRequest.cs" />
+    <Compile Include="Request\BatchReplaceuserRequest.cs" />
     <Compile Include="Request\ConvertToOpenidRequest.cs" />
     <Compile Include="Request\ConvertToUseridRequest.cs" />
     <Compile Include="Request\CreateDepartmentRequest.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Request\GetAgentRequest.cs" />
     <Compile Include="Request\GetCallbackIpRequest.cs" />
     <Compile Include="Request\DepartmentListRequest.cs" />
+    <Compile Include="Request\GetJsapiTicketRequest.cs" />
     <Compile Include="Request\GetListTagRequest.cs" />
     <Compile Include="Request\GetMediaRequest.cs" />
     <Compile Include="Request\GetMenuRequest.cs" />
@@ -173,6 +175,7 @@
     <Compile Include="Response\AuthsuccUserResponse.cs" />
     <Compile Include="Response\BatchDeleteUserResponse.cs" />
     <Compile Include="Response\BatchReplacepartyResponse.cs" />
+    <Compile Include="Response\BatchReplaceuserResponse.cs" />
     <Compile Include="Response\ConvertToOpenidResponse.cs" />
     <Compile Include="Response\ConvertToUseridResponse.cs" />
     <Compile Include="Response\CreateDepartmentResponse.cs" />
@@ -187,6 +190,7 @@
     <Compile Include="Response\GetAgentResponse.cs" />
     <Compile Include="Response\GetCallbackIpResponse.cs" />
     <Compile Include="Response\DepartmentListResponse.cs" />
+    <Compile Include="Response\GetJsapiTicketResponse.cs" />
     <Compile Include="Response\GetListTagResponse.cs" />
     <Compile Include="Response\GetMediaResponse.cs" />
     <Compile Include="Response\GetMenuResponse.cs" />

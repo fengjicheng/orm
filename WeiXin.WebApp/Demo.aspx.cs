@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -18,13 +19,52 @@ namespace WeiXin.WebUi
             
             #endregion
             IWeiXinClient client = new DefaultWeiXinClient();
-            Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity();
-           // Entity  = Qhyhgf.WeiXin.Qy.Api.Token.TokenManager.CreakDefault();
+            Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.Token.ConfingToken().Handle("0");
+            // Entity  = Qhyhgf.WeiXin.Qy.Api.Token.TokenManager.CreakDefault();
+            Qhyhgf.WeiXin.Qy.Api.Request.GetUserListRequest getUserList = new Qhyhgf.WeiXin.Qy.Api.Request.GetUserListRequest();
+            getUserList.DepartmentId = 1;
+            getUserList.FetchChild = 0;
+            getUserList.Status = 0;
             client.Token = Entity;
-            Qhyhgf.WeiXin.Qy.Api.Request.MediaUploadRequest mediaUploadRequest = new Qhyhgf.WeiXin.Qy.Api.Request.MediaUploadRequest();
-            mediaUploadRequest.Media = @"D:\WeiXin\trunk\WeiXin.WebApp\1.jpg";
-            mediaUploadRequest.Type = Qhyhgf.WeiXin.Qy.Api.Domain.MediaType.Image;
-           // Qhyhgf.WeiXin.Qy.Api.Response.MediaUploadResponse MediaUploadResponse= client.Execute<Qhyhgf.WeiXin.Qy.Api.Response.MediaUploadResponse>(mediaUploadRequest);
+            Qhyhgf.WeiXin.Qy.Api.Response.GetUserListResponse MediaUploadResponse = client.Execute<Qhyhgf.WeiXin.Qy.Api.Response.GetUserListResponse>(getUserList);
+        }
+        /// <summary>
+        /// 将DataTable中数据写入到CSV文件中
+        /// </summary>
+        /// <param name="dt">提供保存数据的DataTable</param>
+        /// <param name="fileName">CSV的文件路径</param>
+        public static void SaveCSV(List<Qhyhgf.WeiXin.Qy.Api.Domain.UserItemEntity> reuser, string fullPath)
+        {
+            FileInfo fi = new FileInfo(fullPath);
+            if (!fi.Directory.Exists)
+            {
+                fi.Directory.Create();
+            }
+            FileStream fs = new FileStream(fullPath, System.IO.FileMode.Create, System.IO.FileAccess.Write);
+            //StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.Default);
+            StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.UTF8);
+            string data = "";
+            //写出列名称
+            sw.WriteLine("姓名,帐号");
+            //写出各行数据
+            for (int i = 0; i < reuser.Count; i++)
+            {
+                data = "";
+                Qhyhgf.WeiXin.Qy.Api.Domain.UserItemEntity depItem = reuser[i];
+                string str = depItem.Name;
+                str = str.Replace("\"", "\"\"");//替换英文冒号 英文冒号需要换成两个冒号
+                if (str.Contains(',') || str.Contains('"')
+                    || str.Contains('\r') || str.Contains('\n')) //含逗号 冒号 换行符的需要放到引号中
+                {
+                    str = string.Format("\"{0}\"", str);
+                }
+                data += str;
+                data += ",";
+                data += depItem.UserId;
+                sw.WriteLine(data);
+            }
+            sw.Close();
+            fs.Close();
         }
     }
 }
