@@ -81,7 +81,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
             req.ContentType = "application/x-www-form-urlencoded;charset=utf-8";
 
             HttpWebResponse rsp = (HttpWebResponse)req.GetResponse();
-            Encoding encoding = Encoding.GetEncoding(rsp.CharacterSet);
+            Encoding encoding = Encoding.UTF8;
             return GetResponseAsString(rsp, encoding);
         }
         /// <summary>
