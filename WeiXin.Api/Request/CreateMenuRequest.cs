@@ -16,7 +16,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     /// </summary>
     [Serializable]
     [DataContract]
-    [HttpMethod(Method = HttpVerb.Post, Url = "https://qyapi.weixin.qq.com/cgi-bin/menu/create", Name = "创建菜单", IsToken = true, Serialize = SerializeVerb.None)]
+    [HttpMethod(Method = HttpVerb.Post, Url = "https://qyapi.weixin.qq.com/cgi-bin/menu/create", Name = "创建菜单", IsToken = true, Serialize = SerializeVerb.Json)]
     public class CreateMenuRequest : IWeiXinRequest<CreateMenuResponse>
     {
         public CreateMenuRequest()
