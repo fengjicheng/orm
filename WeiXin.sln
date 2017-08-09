@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "状态模式(04)", "状态�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试学习", "单元测试学习\单元测试学习.csproj", "{F991472C-8BDA-43F9-9ED8-67858879AE88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qhyhgf.Orm.Demo", "Qhyhgf.Orm.Demo\Qhyhgf.Orm.Demo.csproj", "{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,6 +165,18 @@ Global
 		{F991472C-8BDA-43F9-9ED8-67858879AE88}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F991472C-8BDA-43F9-9ED8-67858879AE88}.Release|x86.ActiveCfg = Release|Any CPU
 		{F991472C-8BDA-43F9-9ED8-67858879AE88}.Release|x86.Build.0 = Release|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Debug|x86.Build.0 = Debug|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Release|x86.ActiveCfg = Release|Any CPU
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,5 +192,6 @@ Global
 		{18F19135-1079-4D8E-A727-55ABB229FB9A} = {3EBA103C-E2F8-4CF7-A7BB-EDBA99AD8F00}
 		{E0879C6E-0A93-410B-B722-767A28C1FAAB} = {61651F59-88EC-41D7-B299-01EA05C0826A}
 		{F991472C-8BDA-43F9-9ED8-67858879AE88} = {61651F59-88EC-41D7-B299-01EA05C0826A}
+		{7AB0C676-3FA6-4EC4-A819-B7A87D0E5481} = {E3A45AFF-AD9D-4BD5-94B0-26B9ED4EBEBB}
 	EndGlobalSection
 EndGlobal

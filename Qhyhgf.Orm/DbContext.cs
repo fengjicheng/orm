@@ -5,11 +5,72 @@ using System.Text;
 using System.Linq.Expressions;
 using Qhyhgf.Orm.ExpressionEx;
 using Qhyhgf.Orm.Page;
+using System.Data.Common;
 
 namespace Qhyhgf.Orm
 {
     public class DbContext<TEntity> : IDisposable where TEntity : class
     {
+        private DbConnection _Connection;
+        /// <summary>
+        /// 连接字符串
+        /// </summary>
+        public DbConnection Connection
+        {
+            get
+            {
+                return this._Connection;
+            }
+        }
+        private DbTransaction _Transaction;
+        /// <summary>
+        /// 事物
+        /// </summary>
+        public DbTransaction Transaction
+        {
+            get
+            {
+                return this._Transaction;
+            }
+        }
+        public string _ParamNamePrefix;
+        public string ParamNamePrefix
+        {
+            get
+            {
+                return this._ParamNamePrefix;
+            }
+        }
+        /// <summary>
+        /// 连接字符串
+        /// </summary>
+        private string _configName;
+        /// <summary>
+        ///注册数据库连接 
+        /// </summary>
+        /// <param name="configName">配置名称</param>
+        /// <param name="providerName">连接属性</param>
+        /// <param name="cmdParamNamePrefix">前缀</param>
+        /// <param name="defaultConnString">连接字符串</param>
+        public static void  RegisterDbConnectionInfo(string configName, string providerName, string cmdParamNamePrefix, string defaultConnString)
+        {
+            if (string.IsNullOrEmpty(defaultConnString))
+            {
+                throw new ArgumentNullException("defaultConnString");
+            }
+            if (string.IsNullOrEmpty(configName))
+            {
+                throw new ArgumentNullException("configName");
+            }
+            if (string.IsNullOrEmpty(providerName))
+            {
+                throw new ArgumentNullException("providerName");
+            }
+            if (string.IsNullOrEmpty(cmdParamNamePrefix))
+            {
+                throw new ArgumentNullException("cmdParamNamePrefix");
+            }
+        }
         /// <summary>
         /// 获取所有数据
         /// </summary>

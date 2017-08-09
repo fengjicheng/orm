@@ -5,3 +5,6 @@ D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.Properties.Resourc
 D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.csproj.GenerateResource.Cache
 D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.exe
 D:\weisdk\trunk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Orm.Test.pdb
+D:\weisdk\Qhyhgf.Orm.Test\bin\Debug\Qhyhgf.Test.exe.config
+D:\weisdk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Test.exe
+D:\weisdk\Qhyhgf.Orm.Test\obj\x86\Debug\Qhyhgf.Test.pdb

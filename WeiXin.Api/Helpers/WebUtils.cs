@@ -103,7 +103,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
             byte[] endBoundaryBytes = Encoding.UTF8.GetBytes("\r\n--" + boundary + "--\r\n");
 
             // 组装文件请求参数
-            string fileTemplate = "Content-Disposition:form-data;filelength={0};filename=\"{1}\"\r\nContent-Type:{2}\r\n\r\n";
+            string fileTemplate = "Content-Disposition:form-data;filelength={0};name=\"media\";filename=\"{1}\"\r\nContent-Type:{2}\r\n\r\n";
             FileItem fileItem = new FileItem(fileParams);
             byte[] fileBytes = fileItem.GetContent();
             string fileEntry = string.Format(fileTemplate, fileBytes.Length, fileItem.GetFileName(), fileItem.GetMimeType());

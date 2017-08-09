@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Qhyhgf.Orm;
+using Qhyhgf.Orm.Attribute;
 
 namespace Qhyhgf.Model.Input
 {
-    public class Login
+    [Table(TableName= "Login")]
+    public class Login: BaseEntity
     {
         /// <summary>
         /// 用户名

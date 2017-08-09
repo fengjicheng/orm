@@ -36,7 +36,7 @@ namespace Qhyhgf.Orm
             return tempQuery;
         }
 		private int _count;
-		private StringBuilder _sb = new StringBuilder(1024);
+		private StringBuilder _sb = new StringBuilder(10240);
 		private Dictionary<string, QueryParameter> _parameters = new Dictionary<string, QueryParameter>(10);
 
 		private bool _autoDiscoverParameters;
@@ -165,7 +165,9 @@ namespace Qhyhgf.Orm
 			return query;
 		}
 	}
-
+    /// <summary>
+    /// 查询参数
+    /// </summary>
 	public sealed class QueryParameter
 	{
 		private object _val;
@@ -199,7 +201,9 @@ namespace Qhyhgf.Orm
 		// 其它需要支持的隐式类型转换操作符重载请自行添加。
 	}
 
-
+    /// <summary>
+    /// CPQuery扩展
+    /// </summary>
 	public static class CPQueryExtensions
 	{
 		public static CPQuery AsCPQuery(this string s)
