@@ -15,25 +15,16 @@ namespace Qhyhgf.WeiXin.Qy.Api.Token
         public string EncodingAESKey { get; set; }
         //线程锁
         private object objLock = new object();
-        /// <summary>
-        /// 超时时间
-        /// </summary>
-        private static int _timeout =7200;
         //获得的token
         public string Token { get; set; }
         public string AgentID { get; set; }
         public string Secret { get; set; }
         public string CorpID { get; set; }
         public string Name { get; set; }
-        private string _AccessToken;
         public string AccessToken {
             get {
-                GetAccessToken();
-                return _AccessToken;
-            }
-            private set {
-                _AccessToken = value;
-            }    
+                return GetAccessToken();
+            }   
         }
         /// <summary>
         /// 获得token
@@ -42,8 +33,12 @@ namespace Qhyhgf.WeiXin.Qy.Api.Token
         {
             //数据验证
             Validate();
+            //获得cache
+            Cache.ICache cache = Cache.CacheFactory.Cache();
+            //cache签名使用CorpID+AgentID+Name
+            string signature = WeiXinUtils.Base64Encode(CorpID +"$"+ AgentID + "$"  + Name);
             //如果_access_token存在，并未超时，直接返回
-            if (!string.IsNullOrEmpty(Token) || EndRequest > DateTime.Now.AddSeconds(-_timeout))
+            if (string.IsNullOrEmpty(cache.GetCache<string>(signature)))
             {
                 lock (objLock)
                 {
@@ -56,15 +51,18 @@ namespace Qhyhgf.WeiXin.Qy.Api.Token
                     WebUtils webutils = new WebUtils();
                     string strGet = webutils.DoGet(sb.ToString());
                     Domain.TokenEntity token = strGet.jsonToObj<Domain.TokenEntity>();
-                    if (token.ErrCode!=0)
+                    if (token.ErrCode != 0)
                     {
                         throw new WeiXinException(token.ErrCode);
                     }
-                    AccessToken = token.AccessToken;
-                    _timeout = token.ExpiresIn;
+                    cache.WriteCache<string>(token.AccessToken, signature, DateTime.Now.AddSeconds(token.ExpiresIn));
+                    return token.AccessToken;
                 }
             }
-            return _AccessToken;
+            else
+            {
+                return cache.GetCache<string>(signature);
+            }
         }
         /// <summary>
         /// 数据验证

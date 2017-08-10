@@ -58,5 +58,13 @@ namespace Qhyhgf.WeiXin.Qy.Api.Config
             get { return this["CorpID"].ToString(); }
             set { this["CorpID"] = value; }
         }
+        /// <summary>
+        /// 缓存类型
+        /// </summary>
+        [ConfigurationProperty("CacheType", IsRequired = true)]
+        public string CacheType {
+            get { return this["CacheType"].ToString(); }
+            set { this["CacheType"] = value; }
+        }
     }
 }

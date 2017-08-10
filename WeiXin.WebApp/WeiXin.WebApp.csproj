@@ -3439,6 +3439,7 @@
     <None Include="Public\ueditor\third-party\video-js\font\vjs.svg" />
     <None Include="Public\ueditor\third-party\video-js\font\vjs.ttf" />
     <None Include="Public\ueditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="xmlconfig\redis.config" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

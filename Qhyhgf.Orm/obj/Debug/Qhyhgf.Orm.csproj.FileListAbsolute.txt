@@ -8,3 +8,4 @@ D:\weisdk\Qhyhgf.Orm\bin\Debug\Qhyhgf.Orm.pdb
 D:\weisdk\Qhyhgf.Orm\obj\Debug\Qhyhgf.Orm.dll
 D:\weisdk\Qhyhgf.Orm\obj\Debug\Qhyhgf.Orm.pdb
 D:\weisdk\Qhyhgf.Orm\obj\Debug\Qhyhgf.Orm.csprojResolveAssemblyReference.cache
+D:\weisdk\Qhyhgf.Orm\obj\Debug\Qhyhgf.Orm.csproj.CoreCompileInputs.cache

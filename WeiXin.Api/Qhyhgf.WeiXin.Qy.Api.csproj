@@ -42,6 +42,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\..\Net资料\cms\Dtcms_50_sql_src\DTcms 4.0 redis支持\DTcms.Cache\bin\Debug\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\..\Net资料\cms\Dtcms_50_sql_src\DTcms 4.0 redis支持\DTcms.Cache\bin\Debug\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\..\Net资料\cms\Dtcms_50_sql_src\DTcms 4.0 redis支持\DTcms.Cache\bin\Debug\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\Net资料\cms\Dtcms_50_sql_src\DTcms 4.0 redis支持\DTcms.Cache\bin\Debug\ServiceStack.Text.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -59,6 +71,12 @@
     <Compile Include="Attribute\HttpMethodAttribute.cs" />
     <Compile Include="Attribute\HttpVerb.cs" />
     <Compile Include="Attribute\SerializeVerb.cs" />
+    <Compile Include="Cache\Cache.cs" />
+    <Compile Include="Cache\CacheFactory.cs" />
+    <Compile Include="Cache\ICache.cs" />
+    <Compile Include="Cache\RedisCache.cs" />
+    <Compile Include="Cache\RedisCacheHelper.cs" />
+    <Compile Include="Cache\RedisConfigInfo.cs" />
     <Compile Include="Crypt\Sample.cs" />
     <Compile Include="Domain\AgentEntity.cs" />
     <Compile Include="Domain\CallbackEntity.cs" />

@@ -13,6 +13,26 @@ namespace Qhyhgf.WeiXin.Qy.Api.Helpers
     public  class WeiXinUtils
     {
         /// <summary>
+        /// Base64编码
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string Base64Encode(string str)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(str);
+            return Convert.ToBase64String(bytes);
+        }
+        /// <summary>
+        /// Base64解码
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string Base64Decode(string str)
+        {
+            byte[] outputb = Convert.FromBase64String(str);
+            return Encoding.UTF8.GetString(outputb);
+        }
+        /// <summary>
         /// url编码；
         /// </summary>
         /// <param name="str"></param>

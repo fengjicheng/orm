@@ -10,3 +10,11 @@ D:\weisdk\WeiXin.Api\bin\Debug\log4net.xml
 D:\weisdk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.Api.csprojResolveAssemblyReference.cache
 D:\weisdk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.api.dll
 D:\weisdk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.api.pdb
+D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Common.dll
+D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Interfaces.dll
+D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Redis.dll
+D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Text.dll
+D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Common.xml
+D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Redis.xml
+D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Text.xml
+D:\weisdk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.Api.csproj.CoreCompileInputs.cache

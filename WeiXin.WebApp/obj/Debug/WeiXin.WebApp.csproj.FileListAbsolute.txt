@@ -20,3 +20,11 @@ D:\weisdk\WeiXin.WebApp\bin\Newtonsoft.Json.xml
 D:\weisdk\WeiXin.WebApp\obj\Debug\WeiXin.WebApp.csprojResolveAssemblyReference.cache
 D:\weisdk\WeiXin.WebApp\obj\Debug\WeiXin.WebUi.dll
 D:\weisdk\WeiXin.WebApp\obj\Debug\WeiXin.WebUi.pdb
+D:\weisdk\WeiXin.WebApp\bin\ServiceStack.Redis.dll
+D:\weisdk\WeiXin.WebApp\bin\ServiceStack.Interfaces.dll
+D:\weisdk\WeiXin.WebApp\bin\ServiceStack.Text.dll
+D:\weisdk\WeiXin.WebApp\bin\ServiceStack.Common.dll
+D:\weisdk\WeiXin.WebApp\bin\ServiceStack.Redis.xml
+D:\weisdk\WeiXin.WebApp\bin\ServiceStack.Text.xml
+D:\weisdk\WeiXin.WebApp\bin\ServiceStack.Common.xml
+D:\weisdk\WeiXin.WebApp\obj\Debug\WeiXin.WebApp.csproj.CoreCompileInputs.cache

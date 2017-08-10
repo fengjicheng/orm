@@ -10,3 +10,4 @@ D:\weisdk\Qhyhgf.Model\bin\Debug\Qhyhgf.Orm.pdb
 D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.csprojResolveAssemblyReference.cache
 D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.dll
 D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.pdb
+D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.csproj.CoreCompileInputs.cache
