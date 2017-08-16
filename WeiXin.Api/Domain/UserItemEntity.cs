@@ -26,6 +26,11 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         [DataMember(Name = "department", IsRequired = false)]
         public List<int> DepartmentContent { get; set; }
         /// <summary>
+        /// 部门内的排序值，默认为0。数量必须和department一致，数值越大排序越前面。值范围是[0, 2^32)
+        /// </summary>
+        [DataMember(Name = "order", IsRequired = false)]
+        public List<int> Order { get; set; }
+        /// <summary>
         /// 职位信息。长度为0~64个字符
         /// </summary>
         [DataMember(Name = "position", IsRequired = false)]
@@ -41,17 +46,32 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         [DataMember(Name = "email", IsRequired = false)]
         public string Email { get; set; }
         /// <summary>
-        /// 微信号。企业内必须唯一。（注意：是微信号，不是微信的名字）
+        ///性别。0表示未定义，1表示男性，2表示女性
         /// </summary>
-        [DataMember(Name = "weixinid", IsRequired = false)]
-        public string WeixinId { get; set; }
+        [DataMember(Name = "gender", IsRequired = false)]
+        public int gender { get; set; }
+        /// <summary>
+        ///标示是否为上级。
+        /// </summary>
+        [DataMember(Name = "isleader", IsRequired = false)]
+        public int IsLeader { get; set; }
+        /// <summary>
+        ///标示是否为上级。
+        /// </summary>
+        [DataMember(Name = "isleader", IsRequired = false)]
+        public int IsLeader { get; set; }
+        /// <summary>
+        ///标示是否为上级。
+        /// </summary>
+        [DataMember(Name = "isleader", IsRequired = false)]
+        public int IsLeader { get; set; }
         /// <summary>
         /// 头像url。注：如果要获取小图将url最后的"/0"改成"/64"即可
         /// </summary>
         [DataMember(Name = "avatar", IsRequired = false)]
         public string Avatar { get; set; }
         /// <summary>
-        /// 关注状态: 1=已关注，2=已冻结，4=未关注
+        /// 激活状态: 1=已激活，2=已禁用，4=未激活 已激活代表已激活企业微信或已关注微信插件。未激活代表既未激活企业微信又未关注微信插件。
         /// </summary>
         [DataMember(Name = "status", IsRequired = false)]
         public int Status { get; set; }

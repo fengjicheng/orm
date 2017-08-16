@@ -23,18 +23,10 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         /// </summary>
         [DataMember(Name = "userid", IsRequired = true)]
         public string UserId { get; set; }
-    }
-    /// <summary>
-    /// 用户列表
-    /// </summary>
-    [Serializable]
-    [DataContract]
-    public class Users
-    {
         /// <summary>
-        /// 成员列表
+        /// 成员所属部门
         /// </summary>
-        [DataMember(Name = "userlist", IsRequired = false)]
-        public IList<UserEntity> AttrsContent { get; set; }
+        [DataMember(Name = "department", IsRequired = false)]
+        public List<int> Department { get; set; }
     }
 }

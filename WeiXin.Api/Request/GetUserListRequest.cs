@@ -26,10 +26,5 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         /// </summary>
         [DataMember(Name = "fetch_child")]
         public int FetchChild { get; set; }
-        /// <summary>
-        /// 0获取全部员工，1获取已关注成员列表，2获取禁用成员列表，4获取未关注成员列表。status可叠加
-        /// </summary>
-        [DataMember(Name = "status")]
-        public int Status { get; set; }
     }
 }

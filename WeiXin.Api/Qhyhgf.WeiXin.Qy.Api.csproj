@@ -80,6 +80,7 @@
     <Compile Include="Crypt\Sample.cs" />
     <Compile Include="Domain\AgentEntity.cs" />
     <Compile Include="Domain\CallbackEntity.cs" />
+    <Compile Include="Domain\CheckInDataEntity.cs" />
     <Compile Include="Domain\Menu\ClickEvent.cs" />
     <Compile Include="Domain\Menu\MenuEventBase.cs" />
     <Compile Include="Domain\Menu\LocationSelectEvent.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Dynamic\ReflectionExtensions.cs" />
     <Compile Include="Handler\IEventHandler.cs" />
     <Compile Include="Handler\IMessageContext.cs" />
+    <Compile Include="Helpers\UnixDateTimeConverter.cs" />
     <Compile Include="HttpFactory\Http.cs" />
     <Compile Include="HttpFactory\HttpFactory.cs" />
     <Compile Include="HttpFactory\HttpFile.cs" />
@@ -171,6 +173,7 @@
     <Compile Include="Request\GetAgentRequest.cs" />
     <Compile Include="Request\GetCallbackIpRequest.cs" />
     <Compile Include="Request\DepartmentListRequest.cs" />
+    <Compile Include="Request\GetCheckInDataRequest.cs" />
     <Compile Include="Request\GetJsapiTicketRequest.cs" />
     <Compile Include="Request\GetListTagRequest.cs" />
     <Compile Include="Request\GetMediaRequest.cs" />
@@ -208,6 +211,7 @@
     <Compile Include="Response\GetAgentResponse.cs" />
     <Compile Include="Response\GetCallbackIpResponse.cs" />
     <Compile Include="Response\DepartmentListResponse.cs" />
+    <Compile Include="Response\GetCheckInDataResponse.cs" />
     <Compile Include="Response\GetJsapiTicketResponse.cs" />
     <Compile Include="Response\GetListTagResponse.cs" />
     <Compile Include="Response\GetMediaResponse.cs" />

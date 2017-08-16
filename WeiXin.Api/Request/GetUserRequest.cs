@@ -18,6 +18,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         /// 员工UserID。对应管理端的帐号
         /// </summary>
         [DataMember(Name = "userid", IsRequired = true)]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
     }
 }

@@ -13,9 +13,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Response
     public class SimplelistUserResponse : WeiXinResponse
     {
         /// <summary>
-        /// 成员信息
+        /// 成员列表
         /// </summary>
         [DataMember(Name = "userlist", IsRequired = false)]
-        public Users UsersContent { get; set; }
+        public IList<UserEntity> UserContent { get; set; }
     }
 }
