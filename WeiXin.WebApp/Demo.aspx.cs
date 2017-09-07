@@ -35,7 +35,7 @@ namespace WeiXin.WebUi
         /// </summary>
         /// <param name="dt">提供保存数据的DataTable</param>
         /// <param name="fileName">CSV的文件路径</param>
-        public static void SaveCSV(List<Qhyhgf.WeiXin.Qy.Api.Domain.UserItemEntity> reuser, string fullPath)
+        public static void SaveCSV(List<Qhyhgf.WeiXin.Qy.Api.Domain.UserInfoEntity> reuser, string fullPath)
         {
             FileInfo fi = new FileInfo(fullPath);
             if (!fi.Directory.Exists)
@@ -52,7 +52,7 @@ namespace WeiXin.WebUi
             for (int i = 0; i < reuser.Count; i++)
             {
                 data = "";
-                Qhyhgf.WeiXin.Qy.Api.Domain.UserItemEntity depItem = reuser[i];
+                Qhyhgf.WeiXin.Qy.Api.Domain.UserInfoEntity depItem = reuser[i];
                 string str = depItem.Name;
                 str = str.Replace("\"", "\"\"");//替换英文冒号 英文冒号需要换成两个冒号
                 if (str.Contains(',') || str.Contains('"')

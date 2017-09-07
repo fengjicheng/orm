@@ -60,8 +60,8 @@ namespace Qhyhgf.WeiXin.Qy.Api.Test
             TokenEntity entiy = manger.GetToken("0");
             IWeiXinClient client = new DefaultWeiXinClient();
             client.Token = entiy;
-            AgentListRequest AgentListRequest = new AgentListRequest();
-            AgentListResponse MediaUploadResponse = client.Execute<AgentListResponse>(AgentListRequest);
+            ListAgentRequest AgentListRequest = new ListAgentRequest();
+            ListAgentResponse MediaUploadResponse = client.Execute<ListAgentResponse>(AgentListRequest);
             Assert.AreEqual(MediaUploadResponse.ErrCode,0);
         }
     }

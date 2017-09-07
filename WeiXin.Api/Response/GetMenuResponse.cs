@@ -10,10 +10,11 @@ namespace Qhyhgf.WeiXin.Qy.Api.Response
 {
     public class GetMenuResponse:WeiXinResponse
     {
-        /// <summary>
-        /// 按钮组
-        /// </summary>
-        [DataMember(Name = "menu")]
-        public MenuEntity Menu { get; set; }
+        public GetMenuResponse()
+        {
+            Buttons = new List<MenuEventBase>();
+        }
+        [DataMember(Name = "button")]
+        public IList<MenuEventBase> Buttons { get; set; }
     }
 }

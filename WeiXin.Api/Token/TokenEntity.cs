@@ -36,7 +36,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Token
             //获得cache
             Cache.ICache cache = Cache.CacheFactory.Cache();
             //cache签名使用CorpID+AgentID+Name
-            string signature = WeiXinUtils.Base64Encode(CorpID +"$"+ AgentID + "$"  + Name);
+            //string signature = WeiXinUtils.Base64Encode(CorpID +"$"+ AgentID + "$"  + Name);
+            ///根据secret确认唯一性
+            string signature = Secret;
             //如果_access_token存在，并未超时，直接返回
             if (string.IsNullOrEmpty(cache.GetCache<string>(signature)))
             {

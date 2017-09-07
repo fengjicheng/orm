@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
 {
     /// <summary>
-    /// 跳转URL
-    /// 成员点击view类型按钮后，微信客户端将会打开开发者在按钮中填写的网页URL，
-    /// 可与网页授权获取成员基本信息接口结合，获得成员基本信息。
+    /// 成员点击view类型按钮后，企业微信客户端将会打开开发者在按钮中填写的网页URL，可与网页授权获取成员基本信息接口结合，获得成员基本信息。
     /// </summary>
     public class ViewEvent : MenuEventBase
     {

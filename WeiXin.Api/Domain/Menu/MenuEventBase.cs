@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
 {
     /// <summary>
-    /// 
+    /// 菜单条目
     /// </summary>
     [Serializable]
     [DataContract]
@@ -24,6 +24,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
         /// </summary>
         [DataMember(Name = "name")]
         public virtual string Name { get; set; }
+        /// <summary>
+        /// 二级菜单数组，个数应为1~5个
+        /// </summary>
         [DataMember(Name = "sub_button")]
         public IList<MenuEventBase> SubButton { get; set; }
     }

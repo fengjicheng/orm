@@ -8,7 +8,7 @@ using Qhyhgf.WeiXin.Qy.Api.Domain;
 
 namespace Qhyhgf.WeiXin.Qy.Api.Response
 {
-    public class AgentListResponse : WeiXinResponse
+    public class ListAgentResponse : WeiXinResponse
     {
         [DataMember(Name = "agentlist", IsRequired = false)]
         public IList<AgentEntity> AgentEntityContent { get; set; }

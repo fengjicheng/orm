@@ -16,7 +16,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         /// <summary>
         /// 成员名称
         /// </summary>
-        [DataMember(Name = "name", IsRequired = true)]
+        [DataMember(Name = "name", IsRequired = false)]
         public string Name { get; set; }
         /// <summary>
         /// 员工UserID。对应管理端的帐号

@@ -8,10 +8,7 @@ using System.Threading.Tasks;
 namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
 {
     /// <summary>
-    /// 扫码推事件
-    /// 成员点击按钮后，微信客户端将调起扫一扫工具，
-    /// 完成扫码操作后显示扫描结果（如果是URL，将进入URL），
-    /// 且会将扫码的结果传给开发者，开发者可以下发消息。
+    /// 成员点击按钮后，企业微信客户端将调起扫一扫工具，完成扫码操作后显示扫描结果（如果是URL，将进入URL），且会将扫码的结果传给开发者，开发者可用于下发消息。
     /// </summary>
     public class ScancodePushEvent : MenuEventBase
     {

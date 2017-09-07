@@ -14,9 +14,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     /// </summary>
     [Serializable]
     [DataContract]
-    [HttpMethod(Method = HttpVerb.Post, Url = "https://qyapi.weixin.qq.com/cgi-bin/agent/list", Name = "获取应用概况列表", IsToken = true, Serialize = SerializeVerb.Json)]
+    [HttpMethod(Method = HttpVerb.Get, Url = "https://qyapi.weixin.qq.com/cgi-bin/agent/list", Name = "获取应用概况列表", IsToken = true, Serialize = SerializeVerb.Json)]
 
-    public class AgentListRequest : IWeiXinRequest<AgentListResponse>
+    public class ListAgentRequest : IWeiXinRequest<ListAgentResponse>
     {
 
     }

@@ -28,11 +28,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.Response
         [DataMember(Name = "square_logo_url")]
         public string SquareLogoUrl { get; set; }
         /// <summary>
-        /// 企业应用圆形头像
-        /// </summary>
-        [DataMember(Name = "round_logo_url")]
-        public string RoundLogoUrl { get; set; }
-        /// <summary>
         /// 企业应用详情
         /// </summary>
         [DataMember(Name = "description")]
@@ -68,25 +63,15 @@ namespace Qhyhgf.WeiXin.Qy.Api.Response
         [DataMember(Name = "report_location_flag")]
         public int ReportLocationFlag { get; set; }
         /// <summary>
-        /// 是否接收用户变更通知。0：不接收；1：接收
-        /// </summary>
-        [DataMember(Name = "isreportuser")]
-        public int isreportuser { get; set; }
-        /// <summary>
         /// 是否上报用户进入应用事件。0：不接收；1：接收
         /// </summary>
         [DataMember(Name = "isreportenter")]
         public int isreportenter { get; set; }
         /// <summary>
-        /// 应用类型。1：消息型；2：主页型
+        ///应用主页url
         /// </summary>
-        [DataMember(Name = "type")]
-        public int Type { get; set; }
-        /// <summary>
-        ///关联会话url
-        /// </summary>
-        [DataMember(Name = "chat_extension_url")]
-        public string ChatExtensionUrl { get; set; }
+        [DataMember(Name = "home_url")]
+        public string home_url { get; set; }
 
     }
 }

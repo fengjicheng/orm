@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace Qhyhgf.WeiXin.Qy.Api.Api
+namespace Qhyhgf.WeiXin.Qy.Api
 {
     
     public class RedirectAuthentication : IHttpHandler

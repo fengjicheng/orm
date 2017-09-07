@@ -11,6 +11,8 @@
     <div>
      <a href="getUser.aspx">获取用户信息</a><br />
      <a href="updateUser.aspx">更新用户信息</a><br />
+      <a href="ListAgent.aspx">应用列表</a><br />
+      <a href="getMenu.aspx">获取应用菜单</a>
     </div>
     </form>
 </body>

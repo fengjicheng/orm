@@ -76,7 +76,9 @@
     <Content Include="Admin\Index.aspx" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Demo.aspx" />
+    <Content Include="getMenu.aspx" />
     <Content Include="getUser.aspx" />
+    <Content Include="ListAgent.aspx" />
     <Content Include="Public\Css\demo.css" />
     <Content Include="Public\Css\Extension\IconExtension.css" />
     <Content Include="Public\Css\Extension\IconExtension.html" />
@@ -3389,12 +3391,26 @@
     <Compile Include="Demo.aspx.designer.cs">
       <DependentUpon>Demo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="getMenu.aspx.cs">
+      <DependentUpon>getMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="getMenu.aspx.designer.cs">
+      <DependentUpon>getMenu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="getUser.aspx.cs">
       <DependentUpon>getUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="getUser.aspx.designer.cs">
       <DependentUpon>getUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListAgent.aspx.cs">
+      <DependentUpon>ListAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListAgent.aspx.designer.cs">
+      <DependentUpon>ListAgent.aspx</DependentUpon>
     </Compile>
     <Compile Include="PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>

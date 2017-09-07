@@ -14,24 +14,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
     public class AllowUserinfosEntity
     {
         [DataMember(Name = "user", IsRequired = false)]
-        public IList<UserStatus> UserStatusContent { get; set; }
-    }
-    /// <summary>
-    /// 用户状态
-    /// </summary>
-    [Serializable]
-    [DataContract]
-    public class UserStatus
-    {
-        /// <summary>
-        /// 用户id
-        /// </summary>
-        [DataMember(Name = "userid")]
-        public string UserId { get; set; }
-        /// <summary>
-        /// 状态
-        /// </summary>
-        [DataMember(Name = "state")]
-        public string State { get; set; }
+        public IList<UserEntity> UserStatusContent { get; set; }
     }
 }

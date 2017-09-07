@@ -16,7 +16,7 @@ namespace WeiXin.WebUi
 
         protected override void OnInit(EventArgs e)
         {
-            Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.Token.ConfingToken().Handle("1");
+            Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.Token.ConfingToken().Handle("2000002");
             client.Token = Entity;
             base.OnInit(e);
         }

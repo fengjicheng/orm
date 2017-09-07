@@ -30,12 +30,12 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         [EnumMember(Value = "image")]
         Image = 1 << 2,
         /// <summary>
-        /// voice消息
+        /// 语音消息
         /// </summary>
         [EnumMember(Value = "voice")]
         Voice = 1 << 3,
         /// <summary>
-        /// video消息
+        ///视频消息
         /// </summary>
         [EnumMember(Value = "video")]
         Video = 1 << 4,
@@ -58,6 +58,11 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         /// mpnews消息
         /// </summary>
         [EnumMember(Value = "mpnews")]
-        MpNews = 1 << 8
+        MpNews = 1 << 8,
+        /// <summary>
+        /// textcard
+        /// </summary>
+        [EnumMember(Value = "textcard")]
+        TextCard = 1 << 9
     }
 }
