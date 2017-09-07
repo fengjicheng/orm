@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+     <a href="getUser.aspx">获取用户信息</a><br />
+     <a href="updateUser.aspx">更新用户信息</a><br />
     </div>
     </form>
 </body>

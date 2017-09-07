@@ -17,6 +17,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     [HttpMethod(Method = HttpVerb.Post, Url = "https://qyapi.weixin.qq.com/cgi-bin/user/create", Name = "创建成员", IsToken = true, Serialize = SerializeVerb.Json)]
     public class CreateUserRequest : IWeiXinRequest<CreateUserResponse>
     {
+        public CreateUserRequest() {
+            Enable = 1;
+        }
         /// <summary>
         /// 员工UserID。对应管理端的帐号，企业内必须唯一。长度为1~64个字符
         /// </summary>
@@ -33,7 +36,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         [DataMember(Name = "english_name", IsRequired = false)]
         public string EnglishName { get; set; }
         /// <summary>
-        /// 成员所属部门id列表。注意，每个部门的直属员工上限为1000个
+        /// 成员所属部门id列表。注意，每个部门的直属员工上限为1000个，每个人所属不超过20个
         /// </summary>
         [DataMember(Name = "department",IsRequired=false)]
         public IList<int> Department { get; set; }

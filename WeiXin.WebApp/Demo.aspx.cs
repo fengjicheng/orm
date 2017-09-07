@@ -14,20 +14,21 @@ namespace WeiXin.WebUi
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            #region webconfig读取
-            WeiXinSection section = WeiXinSection.GetInstance();
+            //#region webconfig读取
+            //WeiXinSection section = WeiXinSection.GetInstance();
             
-            #endregion
-            IWeiXinClient client = new DefaultWeiXinClient();
-            Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.Token.ConfingToken().Handle("3010011");
-            // Entity  = Qhyhgf.WeiXin.Qy.Api.Token.TokenManager.CreakDefault();
-            Qhyhgf.WeiXin.Qy.Api.Request.GetCheckInDataRequest getUserList = new Qhyhgf.WeiXin.Qy.Api.Request.GetCheckInDataRequest();
-            getUserList.StartTime = DateTime.Now.AddDays(-2);
-            getUserList.EndTime = DateTime.Now;
-            getUserList.OpenCheckInDataType = 3;
-            getUserList.UserIdList = new List<string> { "16338" };
-            client.Token = Entity;
-            Qhyhgf.WeiXin.Qy.Api.Response.GetCheckInDataResponse MediaUploadResponse = client.Execute<Qhyhgf.WeiXin.Qy.Api.Response.GetCheckInDataResponse>(getUserList);
+           
+            //IWeiXinClient client = new DefaultWeiXinClient();
+            //Qhyhgf.WeiXin.Qy.Api.Token.TokenEntity Entity = new Qhyhgf.WeiXin.Qy.Api.Token.ConfingToken().Handle("3010011");
+            //#endregion
+            //// Entity  = Qhyhgf.WeiXin.Qy.Api.Token.TokenManager.CreakDefault();
+            //Qhyhgf.WeiXin.Qy.Api.Request.GetCheckInDataRequest getUserList = new Qhyhgf.WeiXin.Qy.Api.Request.GetCheckInDataRequest();
+            //getUserList.StartTime = DateTime.Now.AddDays(-2);
+            //getUserList.EndTime = DateTime.Now;
+            //getUserList.OpenCheckInDataType = 3;
+            //getUserList.UserIdList = new List<string> { "16338" };
+            //client.Token = Entity;
+            //Qhyhgf.WeiXin.Qy.Api.Response.GetCheckInDataResponse MediaUploadResponse = client.Execute<Qhyhgf.WeiXin.Qy.Api.Response.GetCheckInDataResponse>(getUserList);
         }
         /// <summary>
         /// 将DataTable中数据写入到CSV文件中

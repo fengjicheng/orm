@@ -22,7 +22,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         [DataMember(Name = "id", IsRequired = true)]
         public int ID { get; set; }
         /// <summary>
-        /// 更新的部门名称。长度限制为1~64个字符。修改部门名称时指定该参数
+        /// 部门名称。长度限制为1~64个字节，字符不能包括\:?”<>｜
         /// </summary>
         [DataMember(Name = "name",IsRequired=false)]
         public string Name { get; set; }
@@ -30,11 +30,11 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         /// 父亲部门id。根部门id为1
         /// </summary>
         [DataMember(Name = "parentid",IsRequired=false)]
-        public string ParentId { get; set;}
+        public int ParentId { get; set;}
         /// <summary>
-        /// 在父部门中的次序。从1开始，数字越大排序越靠后
+        /// 在父部门中的次序值。order值大的排序靠前。有效的值范围是[0, 2^32)
         /// </summary>
         [DataMember(Name = "order",IsRequired=false)]
-        public string Order { get; set; }
+        public int Order { get; set; }
     }
 }

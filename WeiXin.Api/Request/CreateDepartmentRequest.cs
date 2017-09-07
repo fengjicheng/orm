@@ -25,11 +25,16 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         /// 父亲部门id。根部门id为1
         /// </summary>
         [DataMember(Name = "parentid", IsRequired = true)]
-        public string ParentId { get; set; }
+        public int ParentId { get; set; }
         /// <summary>
-        /// 在父部门中的次序。从1开始，数字越大排序越靠后
+        /// 在在父部门中的次序值。order值大的排序靠前。有效的值范围是[0, 2^32)
         /// </summary>
         [DataMember(Name = "order", IsRequired = false)]
-        public string Order { get; set; }
+        public int Order { get; set; }
+        /// <summary>
+        /// 部门id，整型。指定时必须大于1，否则自动生成
+        /// </summary>
+        [DataMember(Name = "id", IsRequired = false)]
+        public int Id { get; set; }
     }
 }

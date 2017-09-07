@@ -21,7 +21,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     public class ConvertToUseridRequest : IWeiXinRequest<ConvertToUseridResponse>
     {
         /// <summary>
-        /// 企业号内的成员id
+        /// 在使用微信支付、微信红包和企业转账之后，返回结果的openid
         /// </summary>
         [DataMember(Name = "openid", IsRequired = true)]
         public string OpenId { get; set; }

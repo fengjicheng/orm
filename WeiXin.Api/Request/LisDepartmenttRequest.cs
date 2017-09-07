@@ -12,7 +12,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     /// 获取部门列表
     /// </summary>
     [HttpMethod(Method = HttpVerb.Get, Url = "https://qyapi.weixin.qq.com/cgi-bin/department/list", Name = "获取部门列表", IsToken = true, Serialize = SerializeVerb.None)]
-    public class DepartmentListRequest : IWeiXinRequest<DepartmentListResponse>
+    public class LisDepartmenttRequest : IWeiXinRequest<ListDepartmentResponse>
     {
         /// <summary>
         /// 部门ID。获取指定部门ID下的子部门

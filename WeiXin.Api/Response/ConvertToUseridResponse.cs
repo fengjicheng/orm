@@ -13,7 +13,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Response
     public class ConvertToUseridResponse : WeiXinResponse
     {
         /// <summary>
-        /// 企业号成员userid对应的openid，若有传参agentid，则是针对该agentid的openid。否则是针对企业号corpid的openid
+        /// 该openid在企业中对应的成员userid
         /// </summary>
         [DataMember(Name = "userid")]
         public string UserId { get; set; }

@@ -15,7 +15,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     public class AuthsuccUserRequest : IWeiXinRequest <AuthsuccUserResponse>
     {
         /// <summary>
-        /// 员工UserID
+        ///成员UserID。对应管理端的帐号
         /// </summary>
         [DataMember(Name = "userid", IsRequired = true)]
         public string UserId { get; set; }

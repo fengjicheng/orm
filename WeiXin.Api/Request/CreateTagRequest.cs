@@ -17,9 +17,14 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     public class CreateTagRequest : IWeiXinRequest<CreateTagResponse>
     {
         /// <summary>
-        /// 标签名称。长度为1~64个字符，标签不可与其他同组的标签重名，也不可与全局标签重名
+        /// 标签名称，长度限制为32个字（汉字或英文字母），标签名不可与其他标签重名。
         /// </summary>
         [DataMember(Name = "tagname", IsRequired = true)]
         public string TagName { get; set; }
+        /// <summary>
+        /// 标签id，非负整型，指定此参数时新增的标签会生成对应的标签id，不指定时则以目前最大的id自增。
+        /// </summary>
+        [DataMember(Name = "tagid", IsRequired = true)]
+        public int tagid { get; set; }
     }
 }

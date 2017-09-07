@@ -11,16 +11,17 @@ using Qhyhgf.WeiXin.Qy.Api.Response;
 namespace Qhyhgf.WeiXin.Qy.Api.Request
 {
     /// <summary>
-    /// 全量覆盖部门
-    ///1.文件中存在、通讯录中也存在的部门，执行修改操作
-    ///2.文件中存在、通讯录中不存在的部门，执行添加操作
-    ///3.文件中不存在、通讯录中存在的部门，当部门下没有任何成员或子部门时，执行删除操作
-    ///4.CSV文件中，部门名称、部门ID、父部门ID为必填字段，部门ID必须为数字，跟部门的部门id默认为1；排序为可选字段，置空或填0不修改排序, order值大的排序靠前。
+    /// 批量增量更新成员
+    ///1.模板中的部门需填写部门ID，多个部门用分号分隔，部门ID必须为数字，跟部门的部门id默认为1
+    ///2.文件中存在、通讯录中也存在的成员，更新成员在文件中指定的字段值
+    ///3.文件中存在、通讯录中不存在的成员，执行添加操作
+    ///4.通讯录中存在、文件中不存在的成员，保持不变
+    //5.成员字段更新规则：可自行添加扩展字段。文件中有指定的字段，以指定的字段值为准；文件中没指定的字段，不更新
     /// </summary>
     [Serializable]
     [DataContract]
-    [HttpMethod(Method = HttpVerb.Post, Url = "https://qyapi.weixin.qq.com/cgi-bin/batch/replaceparty", Name = "全量覆盖部门", IsToken = true, Serialize = SerializeVerb.Json)]
-    public class BatchReplacepartyRequest: IWeiXinRequest<BatchReplacepartyResponse>
+    [HttpMethod(Method = HttpVerb.Post, Url = "https://qyapi.weixin.qq.com/cgi-bin/batch/syncuser", Name = "批量增量更新成员", IsToken = true, Serialize = SerializeVerb.Json)]
+    public class BatchSyncuserRequest : IWeiXinRequest<BatchSyncuserResponse>
     {
         /// <summary>
         /// 上传的csv文件的media_id

@@ -25,9 +25,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         [DataMember(Name = "userid", IsRequired = true)]
         public string UserId { get; set; }
         /// <summary>
-        /// 标签ID
+        /// 整型，需要发送红包的应用ID，若只是使用微信支付和企业转账，则无需该参数
         /// </summary>
         [DataMember(Name = "agentid", IsRequired = true)]
-        public string AgentId { get; set; }
+        public int AgentId { get; set; }
     }
 }

@@ -16,7 +16,11 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     [DataContract]
     [HttpMethod(Method = HttpVerb.Post, Url = "https://qyapi.weixin.qq.com/cgi-bin/user/update", Name = "更新成员", IsToken = true, Serialize = SerializeVerb.Json)]
     public class UpdateUserRequest : IWeiXinRequest<UpdateUserResponse>
-    { /// <summary>
+    {
+        public UpdateUserRequest() {
+            Enable = 1;
+        }
+        /// <summary>
         /// 员工UserID。对应管理端的帐号，企业内必须唯一。长度为1~64个字符
         /// </summary>
         [DataMember(Name = "userid", IsRequired = true)]
@@ -75,7 +79,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         /// 成员头像的mediaid，通过多媒体接口上传图片获得的mediaid
         /// </summary>
         [DataMember(Name = "avatar_mediaid")]
-        public int AvatarMediaid { get; set; }
+        public string AvatarMediaid { get; set; }
         /// <summary>
         /// 启用/禁用成员。1表示启用成员，0表示禁用成员
         /// </summary>
