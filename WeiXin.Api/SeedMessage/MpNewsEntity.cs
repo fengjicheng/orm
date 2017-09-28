@@ -42,4 +42,3 @@ namespace Qhyhgf.WeiXin.Qy.Api.SeedMessage
         public string Digest { get; set; }}
 
     }
-}

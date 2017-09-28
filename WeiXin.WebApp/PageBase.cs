@@ -20,5 +20,6 @@ namespace WeiXin.WebUi
             client.Token = Entity;
             base.OnInit(e);
         }
+
     }
 }

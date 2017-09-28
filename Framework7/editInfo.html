@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>盐湖股份入职登记信息确认</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/mui.picker.css" rel="stylesheet" />
+        <link href="css/mui.poppicker.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<style>
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 22%;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+            .required {
+                content: '*';
+                color: #FF3824;
+                margin-top: 1px;
+                display: inline-block;
+                line-height: 0;
+                vertical-align: middle;
+            }
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">盐湖股份入职登记信息确认</h1>
+		</header>
+		<div class="mui-content" style="margin: 5px;">
+            <div class="mui-content-padded">
+                <h5>姓名：<span class="required">*</span></h5>
+                <input id='card' data-required="true" type="text" class="mui-input-clear mui-input" placeholder="请输入姓名">
+            </div>
+            <div class="mui-content-padded">
+                <h5>性别：<span class="required">*</span></h5>
+                <select class="mui-btn mui-btn-block">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+            <div class="mui-content-padded">
+                <h5>民族：<span class="required">*</span></h5>
+                <input id="peoples" type="text" placeholder="请选择民族" readonly>
+            </div>
+            <div class="mui-content-padded">
+                <h5>党团关系：<span class="required">*</span></h5>
+                <select class="mui-btn mui-btn-block">
+                    <option value="群众">群众</option>
+                    <option value="团员">团员</option>
+                    <option value="党员">党员</option>
+                </select>
+            </div>
+            <div class="mui-content-padded">
+                <h5>籍贯：<span class="required">*</span></h5>
+                <input id="native_place" type="text" placeholder="请选择籍贯" readonly>
+            </div>
+            <div class="mui-content-padded">
+                <h5>婚否：<span class="required">*</span></h5>
+                <select class="mui-btn mui-btn-block">
+                    <option value="未婚">未婚</option>
+                    <option value="已婚">已婚</option>
+                    <option value="离异">离异</option>
+                    <option value="丧偶">丧偶</option>
+                </select>
+            </div>
+            <div class="mui-content-padded">
+                <h5>手机：<span class="required">*</span></h5>
+                <input  type="text" placeholder="请输入手机号">
+            </div>
+            <div class="mui-content-padded">
+                <h5>出生年月：<span class="required">*</span></h5>
+                <input type="text" id="birth_date" readonly data-options='{"type":"date"}' class="mui-btn-block" placeholder="请输选择出生年月">
+            </div>
+            <div class="mui-content-padded">
+                <h5>工作时间：<span class="required">*</span></h5>
+                <span style="font-size:8px;">请填写档案中现有第一次参加工作时间，学生身份请填写入职当天时间。</span>
+                <input type="text" id="work_date" readonly data-options='{"type":"date"}' class="mui-btn-block" placeholder="请输选择工作时间">
+            </div>
+            <div class="mui-content-padded">
+                <h5>来公司时间：<span class="required">*</span></h5>
+                <input type="text" id="registration_date" readonly data-options='{"type":"date"}' class="mui-btn-block" placeholder="请输选择来公司时间">
+            </div>
+            <div class="mui-content-padded">
+                <h5>员工组：<span class="required">*</span></h5>
+                <span style="font-size:8px;">此项为系统默认值，请勿修改。</span>
+                <input type="text" readonly placeholder="员工组" value="试用期员工">
+            </div>
+            <div class="mui-content-padded">
+                <h5>户口类型：<span class="required">*</span></h5>
+                <select class="mui-btn mui-btn-block">
+                    <option value="本市城镇户口">本市城镇户口</option>
+                    <option value="本市非城镇户口">本市非城镇户口</option>
+                    <option value="非本市城镇户口">非本市城镇户口</option>
+                    <option value="非本市非城镇户口">非本市非城镇户口</option>
+                </select>
+            </div>
+            <div class="mui-content-padded">
+                <h5>本人现住址：<span class="required">*</span></h5>
+                <input type="text" id="residential_address" placeholder="请选择省市县" readonly>
+                <input type="text" placeholder="请输入详细地址">
+            </div>
+            <div class="mui-content-padded">
+                <h5>文化程度1：<span class="required">*</span></h5>
+                <select class="mui-btn mui-btn-block">
+                    <option value="技校">技校</option>
+                    <option value="中专">中专</option>
+                    <option value="大专">大专</option>
+                    <option value="本科">本科</option>
+                    <option value="研究生">研究生</option>
+                </select>
+            </div>
+            <div class="mui-content-padded">
+                <h5>毕业学校1：<span class="required">*</span></h5>
+                <input type="text" placeholder="请输入毕业学校">
+            </div>
+            <div class="mui-content-padded">
+                <h5>所学专业1：<span class="required">*</span></h5>
+                <input type="text" placeholder="请输入所学专业">
+            </div>
+            <div class="mui-content-padded">
+                <h5>学位1：</h5>
+                <span style="font-size:8px;">此项：大专及以下学历无需填写</span>
+                <input type="text" placeholder="请输入学位">
+            </div>
+            <div class="mui-content-padded">
+                <h5>学位分类1：</h5>
+                <span style="font-size:8px;">此项：大专及以下学历无需填写</span>
+                <input type="text" placeholder="请输入学位分类">
+            </div>
+            <div class="mui-content-padded">
+                <h5>毕业时间1：<span class="required">*</span></h5>
+                <input type="text" readonly data-options='{"type":"date"}'  id="graduation_date" placeholder="请选择毕业时间">
+            </div>
+            <div class="mui-content-padded">
+                <h5>毕业证号码：<span class="required">*</span></h5>
+                <input type="text" placeholder="请输入毕业证号码">
+            </div>
+            <div class="mui-content-padded">
+                <h5>员工来源：<span class="required">*</span></h5>
+                <span style="font-size:8px;">此项为系统默认值，请勿修改。</span>
+                <input type="text" placeholder="请输入学位分类" value="现场招聘会" readonly>
+            </div>
+            <div class="mui-content-padded">
+                <h5>个人特长</h5>
+                <input type="text" placeholder="请输入个人特长">
+            </div>
+            <div class="mui-content-padded">
+                <h5>原工作单位：<span class="required">*</span></h5>
+                <span style="font-size:8px;">调入人员请填写上一单位名称，学生身份请填写“学生“</span>
+                <input type="text" placeholder="请输入原单位">
+            </div>
+            <div class="mui-content-padded">
+                <h5>备注</h5>
+                <textarea id="textarea" rows="5" placeholder="请输入备注"></textarea>
+            </div>
+			<div class="mui-content-padded">
+				<button id='seach' class="mui-btn mui-btn-block mui-btn-primary">查询</button>
+			</div>
+			<div class="mui-content-padded" style="text-align:center">
+                <span class="spliter">股份公司信息中心制作</span>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+        <script src="js/mui.picker.js"></script>
+        <script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/mui.picker.min.js"></script>
+		<script>
+            (function ($, doc) {
+                var _getParam = function(obj, param) {
+						return obj[param] || '';
+					};
+				$.init({
+					statusBarBackground: '#f7f7f7'
+                });
+
+                var card = doc.getElementById("card");
+                var btn_seach = doc.getElementById("seach");
+                btn_seach.addEventListener('tap', function () {
+                    var isStateCard = IdentityCodeValid(card.value);
+                });
+                function mui_alert(msg)
+                {
+                    $.alert('', msg, function () {
+                    });
+                }
+                //民族处理
+                var peoplesPicker = new $.PopPicker();
+                peoplesPicker.setData([
+                      { value: '1', text: '汉族' }
+                    , { value: '2', text: '蒙古族' }
+                    , { value: '3', text: '回族' }
+                    , { value: '4', text: '藏族' }
+                    , { value: '5', text: '维吾尔族' }
+                    , { value: '6', text: '苗族' }
+                    , { value: '7', text: '彝族' }
+                    , { value: '8', text: '壮族' }
+                    , { value: '9', text: '布依族' }
+                    , { value: '10', text: '朝鲜族' }
+                    , { value: '11', text: '满族' }
+                    , { value: '12', text: '侗族' }
+                    , { value: '13', text: '瑶族' }
+                    , { value: '14', text: '白族' }
+                    , { value: '15', text: '土家族' }
+                    , { value: '16', text: '哈尼族' }
+                    , { value: '17', text: '哈萨克族' }
+                    , { value: '18', text: '傣族' }
+                    , { value: '19', text: '黎族' }
+                    , { value: '20', text: '傈僳族' }
+                    , { value: '21', text: '佤族' }
+                    , { value: '22', text: '畲族' }
+                    , { value: '23', text: '高山族' }
+                    , { value: '24', text: '拉祜族' }
+                    , { value: '25', text: '水族' }
+                    , { value: '26', text: '东乡族' }
+                    , { value: '27', text: '纳西族' }
+                    , { value: '28', text: '景颇族' }
+                    , { value: '29', text: '柯尔克孜　' }
+                    , { value: '30', text: '土族' }
+                    , { value: '31', text: '达斡尔族' }
+                    , { value: '32', text: '仫佬族' }
+                    , { value: '33', text: '羌族' }
+                    , { value: '34', text: '布朗族' }
+                    , { value: '35', text: '撒拉族' }
+                    , { value: '36', text: '毛难族' }
+                    , { value: '37', text: '仡佬族' }
+                    , { value: '38', text: '锡伯族' }
+                    , { value: '39', text: '阿昌族' }
+                    , { value: '40', text: '普米族' }
+                    , { value: '41', text: '塔吉克族' }
+                    , { value: '42', text: '怒族' }
+                    , { value: '43', text: '乌孜别克' }
+                    , { value: '44', text: '俄罗斯族' }
+                    , { value: '45', text: '鄂温克族' }
+                    , { value: '46', text: '崩龙族' }
+                    , { value: '47', text: '保安族' }
+                    , { value: '48', text: '裕固族' }
+                    , { value: '49', text: '京族' }
+                    , { value: '50', text: '塔塔尔族' }
+                    , { value: '51', text: '独龙族' }
+                    , { value: '52', text: '鄂伦春族' }
+                    , { value: '53', text: '赫哲族' }
+                    , { value: '54', text: '门巴族' }
+                    , { value: '55', text: '珞巴族' }
+                    , { value: '56', text: '基诺族' }
+                    , { value: '57', text: '其他' }
+                ]);
+                var peoples = doc.getElementById('peoples');
+                peoples.addEventListener('tap', function (event) {
+                    peoplesPicker.show(function (items) {
+                        peoples.setAttribute("value", items[0].text);
+                        //返回 false 可以阻止选择框的关闭
+                        //return false;
+                    });
+                }, false);
+                ///选择籍贯
+                var native_place = doc.getElementById("native_place");
+                var cityPicker3 = new $.PopPicker({
+                    layer: 3
+                });
+                cityPicker3.setData(cityData3);
+                native_place.addEventListener('tap', function (event) {
+                    cityPicker3.show(function (items) {
+                        native_place.setAttribute("value", _getParam(items[0], 'text')  + _getParam(items[2], 'text'));
+                        //返回 false 可以阻止选择框的关闭
+                        //return false;
+                    });
+                }, false);
+                //出生年月
+                var birth_date = doc.getElementById("birth_date");
+                birth_date.addEventListener('tap', function (event) {
+                    var _self = this;
+                    if (_self.picker) {
+                        _self.picker.show(function (rs) {
+                            birth_date.setAttribute("value", rs.text);
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        var id = this.getAttribute('id');
+                        /*
+                         * 首次显示时实例化组件
+                         * 示例为了简洁，将 options 放在了按钮的 dom 上
+                         * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                         */
+                        _self.picker = new $.DtPicker(options);
+                        _self.picker.show(function (rs) {
+                            /*
+                             * rs.value 拼合后的 value
+                             * rs.text 拼合后的 text
+                             * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                             * rs.m 月，用法同年
+                             * rs.d 日，用法同年
+                             * rs.h 时，用法同年
+                             * rs.i 分（minutes 的第二个字母），用法同年
+                             */
+                            birth_date.setAttribute("value", rs.text);
+                            /* 
+                             * 返回 false 可以阻止选择框的关闭
+                             * return false;
+                             */
+                            /*
+                             * 释放组件资源，释放后将将不能再操作组件
+                             * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                             * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                             * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                             */
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    }
+                }, false);
+                ///工作时间
+                var work_date = doc.getElementById("work_date");
+                work_date.addEventListener('tap', function (event) {
+                    var _self = this;
+                    if (_self.picker) {
+                        _self.picker.show(function (rs) {
+                            work_date.setAttribute("value", rs.text);
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        var id = this.getAttribute('id');
+                        /*
+                         * 首次显示时实例化组件
+                         * 示例为了简洁，将 options 放在了按钮的 dom 上
+                         * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                         */
+                        _self.picker = new $.DtPicker(options);
+                        _self.picker.show(function (rs) {
+                            /*
+                             * rs.value 拼合后的 value
+                             * rs.text 拼合后的 text
+                             * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                             * rs.m 月，用法同年
+                             * rs.d 日，用法同年
+                             * rs.h 时，用法同年
+                             * rs.i 分（minutes 的第二个字母），用法同年
+                             */
+                            work_date.setAttribute("value", rs.text);
+                            /* 
+                             * 返回 false 可以阻止选择框的关闭
+                             * return false;
+                             */
+                            /*
+                             * 释放组件资源，释放后将将不能再操作组件
+                             * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                             * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                             * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                             */
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    }
+                }, false);
+                //来公司时间
+                var registration_date = doc.getElementById("registration_date");
+                registration_date.addEventListener('tap', function (event) {
+                    var _self = this;
+                    if (_self.picker) {
+                        _self.picker.show(function (rs) {
+                            registration_date.setAttribute("value", rs.text);
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        var id = this.getAttribute('id');
+                        /*
+                         * 首次显示时实例化组件
+                         * 示例为了简洁，将 options 放在了按钮的 dom 上
+                         * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                         */
+                        _self.picker = new $.DtPicker(options);
+                        _self.picker.show(function (rs) {
+                            /*
+                             * rs.value 拼合后的 value
+                             * rs.text 拼合后的 text
+                             * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                             * rs.m 月，用法同年
+                             * rs.d 日，用法同年
+                             * rs.h 时，用法同年
+                             * rs.i 分（minutes 的第二个字母），用法同年
+                             */
+                            registration_date.setAttribute("value", rs.text);
+                            /* 
+                             * 返回 false 可以阻止选择框的关闭
+                             * return false;
+                             */
+                            /*
+                             * 释放组件资源，释放后将将不能再操作组件
+                             * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                             * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                             * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                             */
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    }
+                }, false);
+                //居住地
+                var residential_address = doc.getElementById("residential_address");
+                residential_address.addEventListener('tap', function (event) {
+                    cityPicker3.show(function (items) {
+                        var lastChar = _getParam(items[0], 'text').charAt(_getParam(items[0], 'text').length - 1);
+                        if (lastChar == "市") {
+                            residential_address.setAttribute("value", _getParam(items[0], 'text')  + _getParam(items[2], 'text'));
+                        }
+                        else {
+                            residential_address.setAttribute("value", _getParam(items[0], 'text') + _getParam(items[1], 'text') + _getParam(items[2], 'text'));
+
+                        }
+                        //返回 false 可以阻止选择框的关闭
+                        //return false;
+                    });
+                }, false);
+                //毕业时间
+                var graduation_date = doc.getElementById("graduation_date");
+                graduation_date.addEventListener('tap', function (event) {
+                    var _self = this;
+                    if (_self.picker) {
+                        _self.picker.show(function (rs) {
+                            graduation_date.setAttribute("value", rs.text);
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        var id = this.getAttribute('id');
+                        /*
+                         * 首次显示时实例化组件
+                         * 示例为了简洁，将 options 放在了按钮的 dom 上
+                         * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                         */
+                        _self.picker = new $.DtPicker(options);
+                        _self.picker.show(function (rs) {
+                            /*
+                             * rs.value 拼合后的 value
+                             * rs.text 拼合后的 text
+                             * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                             * rs.m 月，用法同年
+                             * rs.d 日，用法同年
+                             * rs.h 时，用法同年
+                             * rs.i 分（minutes 的第二个字母），用法同年
+                             */
+                            graduation_date.setAttribute("value", rs.text);
+                            /* 
+                             * 返回 false 可以阻止选择框的关闭
+                             * return false;
+                             */
+                            /*
+                             * 释放组件资源，释放后将将不能再操作组件
+                             * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                             * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                             * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                             */
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    }
+                }, false);
+                //身份证号码验证
+                function IdentityCodeValid(code) {
+                    var city = { 11: "北京", 12: "天津", 13: "河北", 14: "山西", 15: "内蒙古", 21: "辽宁", 22: "吉林", 23: "黑龙江 ", 31: "上海", 32: "江苏", 33: "浙江", 34: "安徽", 35: "福建", 36: "江西", 37: "山东", 41: "河南", 42: "湖北 ", 43: "湖南", 44: "广东", 45: "广西", 46: "海南", 50: "重庆", 51: "四川", 52: "贵州", 53: "云南", 54: "西藏 ", 61: "陕西", 62: "甘肃", 63: "青海", 64: "宁夏", 65: "新疆", 71: "台湾", 81: "香港", 82: "澳门", 91: "国外 " };
+                    var tip = "";
+                    var pass = true;
+
+                    if (!code || !/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[12])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(code)) {
+                        tip = "身份证号格式错误";
+                        pass = false;
+                    }
+
+                    else if (!city[code.substr(0, 2)]) {
+                        tip = "身份证的地址编码错误";
+                        pass = false;
+                    }
+                    else {
+                        //18位身份证需要验证最后一位校验位
+                        if (code.length == 18) {
+                            code = code.split('');
+                            //∑(ai×Wi)(mod 11)
+                            //加权因子
+                            var factor = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+                            //校验位
+                            var parity = [1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2];
+                            var sum = 0;
+                            var ai = 0;
+                            var wi = 0;
+                            for (var i = 0; i < 17; i++) {
+                                ai = code[i];
+                                wi = factor[i];
+                                sum += ai * wi;
+                            }
+                            var last = parity[sum % 11];
+                            if (parity[sum % 11] != code[17]) {
+                                tip = "身份证的校验位错误";
+                                pass = false;
+                            }
+                        }
+                    }
+                    if (!pass) mui_alert(tip);
+                    return pass;
+                }
+			}(mui, document));
+		</script>
+	</body>
+
+</html>

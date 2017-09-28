@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
-using Qhyhgf.WeiXin.Qy.Api.SeedMessage;
 
-namespace Qhyhgf.WeiXin.Qy.SeedMessage
+namespace Qhyhgf.WeiXin.Qy.Api.SeedMessage
 {
     [Serializable]
     [DataContract]

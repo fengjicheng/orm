@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>盐湖股份入职登记信息确认</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 22%;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">盐湖股份入职登记信息确认</h1>
+		</header>
+		<div class="mui-content" style="margin: 5px;">
+			<div class="mui-content-padded">
+                <h5>身份证号码：</h5>
+				<input id='card' type="text"  class="mui-input-clear mui-input" placeholder="请输入身份证号">
+			 </div>
+			
+			<div class="mui-content-padded">
+				<button id='seach' class="mui-btn mui-btn-block mui-btn-primary">查询</button>
+			</div>
+			<div class="mui-content-padded oauth-area">
+                <span class="spliter">股份公司信息中心制作</span>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script>
+			(function($, doc) {
+				$.init({
+					statusBarBackground: '#f7f7f7'
+                });
+                var card = document.getElementById("card");
+                var btn_seach = document.getElementById("seach");
+                btn_seach.addEventListener('tap', function () {
+                    var isStateCard = IdentityCodeValid(card.value);
+                    if (isStateCard) {
+                        window.location.href = 'editInfo.html';
+                    }
+                });
+                function mui_alert(msg)
+                {
+                    $.alert('', msg, function () {
+                    });
+                }
+                //身份证号码验证
+                function IdentityCodeValid(code) {
+                    var city = { 11: "北京", 12: "天津", 13: "河北", 14: "山西", 15: "内蒙古", 21: "辽宁", 22: "吉林", 23: "黑龙江 ", 31: "上海", 32: "江苏", 33: "浙江", 34: "安徽", 35: "福建", 36: "江西", 37: "山东", 41: "河南", 42: "湖北 ", 43: "湖南", 44: "广东", 45: "广西", 46: "海南", 50: "重庆", 51: "四川", 52: "贵州", 53: "云南", 54: "西藏 ", 61: "陕西", 62: "甘肃", 63: "青海", 64: "宁夏", 65: "新疆", 71: "台湾", 81: "香港", 82: "澳门", 91: "国外 " };
+                    var tip = "";
+                    var pass = true;
+
+                    if (!code || !/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[12])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(code)) {
+                        tip = "身份证号格式错误";
+                        pass = false;
+                    }
+
+                    else if (!city[code.substr(0, 2)]) {
+                        tip = "身份证的地址编码错误";
+                        pass = false;
+                    }
+                    else {
+                        //18位身份证需要验证最后一位校验位
+                        if (code.length == 18) {
+                            code = code.split('');
+                            //∑(ai×Wi)(mod 11)
+                            //加权因子
+                            var factor = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+                            //校验位
+                            var parity = [1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2];
+                            var sum = 0;
+                            var ai = 0;
+                            var wi = 0;
+                            for (var i = 0; i < 17; i++) {
+                                ai = code[i];
+                                wi = factor[i];
+                                sum += ai * wi;
+                            }
+                            var last = parity[sum % 11];
+                            if (parity[sum % 11] != code[17]) {
+                                tip = "身份证的校验位错误";
+                                pass = false;
+                            }
+                        }
+                    }
+                    if (!pass) mui_alert(tip);
+                    return pass;
+                }
+			}(mui, document));
+		</script>
+	</body>
+
+</html>

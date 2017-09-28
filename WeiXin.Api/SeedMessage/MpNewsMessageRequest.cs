@@ -5,7 +5,6 @@ using System.Text;
 using System.Runtime.Serialization;
 using Qhyhgf.WeiXin.Qy.Api.Request;
 using Qhyhgf.WeiXin.Qy.Api.Attribute;
-using Qhyhgf.WeiXin.Qy.SeedMessage;
 
 namespace Qhyhgf.WeiXin.Qy.Api.SeedMessage
 {
