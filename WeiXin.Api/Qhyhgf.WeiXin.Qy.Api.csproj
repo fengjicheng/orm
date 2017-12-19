@@ -90,6 +90,8 @@
     <Compile Include="Domain\Menu\ScancodeWaitmsgEvent.cs" />
     <Compile Include="Domain\Menu\ScancodePushEvent.cs" />
     <Compile Include="Domain\Menu\ViewEvent.cs" />
+    <Compile Include="Domain\Xml\ExtAttrEntity.cs" />
+    <Compile Include="Domain\Xml\UpdateUserEvent.cs" />
     <Compile Include="DuplexGzipModule.cs" />
     <Compile Include="Config\WeiXinCollection.cs" />
     <Compile Include="Config\WeiXinKeyValueSetting.cs" />
