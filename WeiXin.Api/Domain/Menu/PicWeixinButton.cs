@@ -8,27 +8,26 @@ using System.Threading.Tasks;
 namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
 {
     /// <summary>
-    ///成员点击click类型按钮后，企业微信服务器会通过消息接口推送消息类型为event 的结构给开发者（参考消息接口指南），
-    ///并且带上按钮中开发者填写的key值，开发者可以通过自定义的key值与成员进行交互；
+    /// 成员点击按钮后，企业微信客户端将调起企业微信相册，完成选择操作后，将选择的相片发送给开发者的服务器，并推送事件给开发者，同时收起相册，随后可能会收到开发者下发的消息。
     /// </summary>
-    public class ClickEvent : MenuEventBase
+    public class PicWeixinButton : MenuButtonBase
     {
-        public ClickEvent() {
-            Type = "click";
+        public PicWeixinButton() {
+            Type = "pic_weixin";
         }
         /// <summary>
         /// 菜单标题，不超过16个字节，子菜单不超过40个字节
         /// </summary>
         public override string Name
         {
-            get;set;
+            get; set;
         }
         /// <summary>
         /// 	菜单的响应动作类型
         /// </summary>
         public override string Type
         {
-            get;set;
+            get; set;
         }
         /// <summary>
         /// 菜单KEY值，用于消息接口推送，不超过128字节

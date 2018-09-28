@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
 {
     /// <summary>
-    ///成员点击按钮后，企业微信客户端将调起企业微信相册，完成选择操作后，将选择的相片发送给开发者的服务器，并推送事件给开发者，同时收起相册，随后可能会收到开发者下发的消息。
+    /// 成员点击view类型按钮后，企业微信客户端将会打开开发者在按钮中填写的网页URL，可与网页授权获取成员基本信息接口结合，获得成员基本信息。
     /// </summary>
-    public class PicPhotoOrAlbumEvent : MenuEventBase
+    public class ViewButton : MenuButtonBase
     {
-        public PicPhotoOrAlbumEvent() {
-            Type = "pic_photo_or_album";
+        public ViewButton() {
+            Type = "view";
         }
         /// <summary>
         /// 菜单标题，不超过16个字节，子菜单不超过40个字节
@@ -30,9 +30,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
             get; set;
         }
         /// <summary>
-        /// 菜单KEY值，用于消息接口推送，不超过128字节
+        /// 页链接，成员点击菜单可打开链接，不超过256字节
         /// </summary>
-        [DataMember(Name = "key")]
-        public string Key { get; set; }
+        [DataMember(Name = "url")]
+        public string Url { get;set;}
     }
 }

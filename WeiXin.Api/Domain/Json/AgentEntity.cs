@@ -30,10 +30,5 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         /// </summary>
         [DataMember(Name = "square_logo_url")]
         public string SquareLogoUrl { get; set; }
-        /// <summary>
-        ///圆形头像url
-        /// </summary>
-        [DataMember(Name = "round_logo_url")]
-        public string RoundLogoUrl { get; set; }
     }
 }

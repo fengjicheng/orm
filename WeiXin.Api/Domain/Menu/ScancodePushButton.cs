@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
 {
     /// <summary>
-    /// 弹出系统拍照发图 成员点击按钮后，企业微信客户端将调起系统相机，完成拍照操作后，会将拍摄的相片发送给开发者，并推送事件给开发者，同时收起系统相机，随后可能会收到开发者下发的消息。
+    /// 成员点击按钮后，企业微信客户端将调起扫一扫工具，完成扫码操作后显示扫描结果（如果是URL，将进入URL），且会将扫码的结果传给开发者，开发者可用于下发消息。
     /// </summary>
-    public class PicSysphotoEvent : MenuEventBase
+    public class ScancodePushButton : MenuButtonBase
     {
-        public PicSysphotoEvent() {
-            Type = "pic_sysphoto";
+        public ScancodePushButton() {
+            Type = "scancode_push";
         }
         /// <summary>
         /// 菜单标题，不超过16个字节，子菜单不超过40个字节

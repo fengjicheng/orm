@@ -21,7 +21,7 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
     {
         public CreateMenuRequest()
         {
-            Buttons = new List<MenuEventBase>();
+            Buttons = new List<MenuButtonBase>();
         }
         /// <summary>
         /// 企业应用的id，整型。可在应用的设置页面查看
@@ -29,6 +29,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.Request
         [GetParameter(Name = "agentid",IsRequired=true)]
         public string AgentId { get; set; }
         [DataMember(Name = "button")]
-        public IList<MenuEventBase> Buttons { get; set; }
+        public IList<MenuButtonBase> Buttons { get; set; }
     }
 }

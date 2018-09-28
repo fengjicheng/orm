@@ -8,26 +8,26 @@ using System.Threading.Tasks;
 namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
 {
     /// <summary>
-    /// 成员点击按钮后，企业微信客户端将调起扫一扫工具，完成扫码操作后，将扫码的结果传给开发者，同时收起扫一扫工具，然后弹出“消息接收中”提示框，随后可能会收到开发者下发的消息。
+    ///成员点击click类型按钮后，企业微信服务器会通过消息接口推送消息类型为event 的结构给开发者（参考消息接口指南），并且带上按钮中开发者填写的key值，开发者可以通过自定义的key值与成员进行交互；
     /// </summary>
-    public class ScancodeWaitmsgEvent : MenuEventBase
+    public class ClickButton : MenuButtonBase
     {
-        public ScancodeWaitmsgEvent() {
-            Type = "scancode_waitmsg";
+        public ClickButton() {
+            Type = "click";
         }
         /// <summary>
         /// 菜单标题，不超过16个字节，子菜单不超过40个字节
         /// </summary>
         public override string Name
         {
-            get; set;
+            get;set;
         }
         /// <summary>
         /// 	菜单的响应动作类型
         /// </summary>
         public override string Type
         {
-            get; set;
+            get;set;
         }
         /// <summary>
         /// 菜单KEY值，用于消息接口推送，不超过128字节

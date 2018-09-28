@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
 {
     /// <summary>
-    /// 成员点击按钮后，企业微信客户端将调起企业微信相册，完成选择操作后，将选择的相片发送给开发者的服务器，并推送事件给开发者，同时收起相册，随后可能会收到开发者下发的消息。
+    /// 弹出系统拍照发图
+    /// 弹出系统拍照发图 成员点击按钮后，企业微信客户端将调起系统相机，完成拍照操作后，会将拍摄的相片发送给开发者，并推送事件给开发者，同时收起系统相机，随后可能会收到开发者下发的消息。
     /// </summary>
-    public class PicWeixinEvent : MenuEventBase
+    public class PicSysphotoButton : MenuButtonBase
     {
-        public PicWeixinEvent() {
-            Type = "pic_weixin";
+        public PicSysphotoButton() {
+            Type = "pic_sysphoto";
         }
         /// <summary>
         /// 菜单标题，不超过16个字节，子菜单不超过40个字节

@@ -12,9 +12,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Response
     {
         public GetMenuResponse()
         {
-            Buttons = new List<MenuEventBase>();
+            Buttons = new List<MenuButtonBase>();
         }
         [DataMember(Name = "button")]
-        public IList<MenuEventBase> Buttons { get; set; }
+        public IList<MenuButtonBase> Buttons { get; set; }
     }
 }

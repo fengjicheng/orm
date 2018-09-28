@@ -12,10 +12,18 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
     /// </summary>
     [Serializable]
     [DataContract]
-    public  class MenuEventBase
+    public  class MenuButtonBase
     {
         /// <summary>
         /// 菜单的响应动作类型
+        /// click	点击推事件
+        /// view	跳转URL
+        /// scancode_push	扫码推事件
+        /// scancode_waitmsg	扫码推事件 且弹出“消息接收中”提示框
+        /// pic_sysphoto	弹出系统拍照发图
+        /// pic_photo_or_album	弹出拍照或者相册发图
+        /// pic_weixin	弹出企业微信相册发图器
+        /// location_select	弹出地理位置选择器
         /// </summary>
         [DataMember(Name = "type")]
         public virtual string Type { get; set; }
@@ -28,6 +36,6 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain.Menu
         /// 二级菜单数组，个数应为1~5个
         /// </summary>
         [DataMember(Name = "sub_button")]
-        public IList<MenuEventBase> SubButton { get; set; }
+        public IList<MenuButtonBase> SubButton { get; set; }
     }
 }
