@@ -11,3 +11,4 @@ D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.csprojResolveAssemblyReference.cac
 D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.dll
 D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.pdb
 D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.csproj.CoreCompileInputs.cache
+D:\weisdk\Qhyhgf.Model\obj\Debug\Qhyhgf.Model.csproj.CopyComplete

@@ -18,3 +18,4 @@ D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Redis.xml
 D:\weisdk\WeiXin.Api\bin\Debug\ServiceStack.Text.xml
 D:\weisdk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.Api.csproj.CoreCompileInputs.cache
 D:\weisdk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.Api.csprojResolveAssemblyReference.cache
+D:\weisdk\WeiXin.Api\obj\Debug\Qhyhgf.WeiXin.Qy.Api.csproj.CopyComplete

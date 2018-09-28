@@ -24,6 +24,9 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         [DataMember(Name = "value",IsRequired=true)]
         public string Value { get; set; }
     }
+    /// <summary>
+    /// 扩展属性添加方法
+    /// </summary>
     [Serializable]
     [DataContract]
     public class Attrs {

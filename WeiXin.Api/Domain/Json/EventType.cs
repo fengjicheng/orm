@@ -25,9 +25,15 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         [EnumMember(Value = "unsubscribe")]
         Unsubscribe = 1 << 1,
         /// <summary>
+        /// 进入应用
+        /// 本事件在成员进入企业微信的应用时触发
+        /// </summary>
+        [EnumMember(Value = "enter_agent")]
+        Enter_Agent = 1 << 1,
+        /// <summary>
         /// 上报地理位置事件
         /// </summary>
-       [EnumMember(Value = "location")]
+        [EnumMember(Value = "location")]
         Location = 1 << 2,
         /// <summary>
         /// 点击菜单拉取消息的事件推送
@@ -77,5 +83,10 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         /// </summary>
         [EnumMember(Value = "location_select")]
         Location_Select = 1 << 10,
+        /// <summary>
+        /// 通讯录变更事件
+        /// </summary>
+        [EnumMember(Value = "change_contact")]
+        Change_Contact = 1 << 11,
     }
 }

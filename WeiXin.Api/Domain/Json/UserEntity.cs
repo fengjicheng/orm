@@ -23,10 +23,5 @@ namespace Qhyhgf.WeiXin.Qy.Api.Domain
         /// </summary>
         [DataMember(Name = "userid", IsRequired = true)]
         public string UserId { get; set; }
-        /// <summary>
-        /// 成员所属部门
-        /// </summary>
-        [DataMember(Name = "department", IsRequired = false)]
-        public List<int> Department { get; set; }
     }
 }
