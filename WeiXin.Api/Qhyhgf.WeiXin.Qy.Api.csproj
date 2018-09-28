@@ -156,6 +156,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\Invite\BatchInviteRequest.cs" />
     <Compile Include="Request\Media\GetJssdkMediaRequest.cs" />
+    <Compile Include="Request\Media\MediaUploadimgRequest.cs" />
     <Compile Include="Request\Tag\AddTagusersTagRequest.cs" />
     <Compile Include="Request\Agent\ListAgentRequest.cs" />
     <Compile Include="Request\Batch\BatchGetResultRequest.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="Request\UserGetuserinfoRequest.cs" />
     <Compile Include="Response\Invite\BatchInviteResponse.cs" />
     <Compile Include="Response\Media\GetJssdkMediaResponse.cs" />
+    <Compile Include="Response\Media\MediaUploadimgResponse.cs" />
     <Compile Include="Response\Tag\AddTagusersTagResponse.cs" />
     <Compile Include="Response\Agent\ListAgentResponse.cs" />
     <Compile Include="Response\User\AuthsuccUserResponse.cs" />
